@@ -14,7 +14,7 @@ Python 3.10+ is required. Start with the network free recruiter CLI:
 python3 -m recruiter prepare --input experiments/recruiter/fixture.json --output-dir runtime/recruiter-demo
 ```
 
-For the dedicated OpenClaw agent, follow [INSTALL.md](docs/INSTALL.md). It uses its own state and port 20789, the explicit NVIDIA `z-ai/glm-5.3` route, and no fallback. It does not alter the parked Trail agent or your default OpenClaw gateway.
+For a packaged install, see [Docker instructions](docs/CONTAINER.md). For the dedicated native OpenClaw agent, follow [INSTALL.md](docs/INSTALL.md). It uses its own state and port 20789, the explicit NVIDIA `z-ai/glm-5.3` route, and no fallback. It does not alter the parked Trail agent or your default OpenClaw gateway.
 
 ## What is included
 

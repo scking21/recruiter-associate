@@ -13,14 +13,14 @@ This is the selected recruiter route. It supersedes the old Trail priority. The 
 | Public Agent Index listing | **Blocked** | No listing, registration, public image, or confirmed deployment exists in this repo. The source is public; Agent Index registration remains separate. Here image means a deployable container, not the repository cover. |
 | MIT license and official client reporting | **Source/license ready; reporting unverified** | MIT LICENSE is present and the public repository is created. The vendored official client retains Apache 2.0; actual usage submission and acceptance remain unverified. |
 | Genuine usage and installs | **Blocked** | No confirmed real install or token usage exists. Use only genuine startup users and collaborators. Artificial usage, fabricated applicants, and self-generated leaderboard activity are prohibited. |
-| Demo video, at least 60 seconds | **Unverified** | No confirmed video exists. Record the real multiplayer workflow after it works. |
+| Demo video, at least 60 seconds | **Deferred by user** | Stop before video creation or publication. No video work is part of this run. |
 | Team, age, and event attendance | **Unverified** | Team limit is four people. Each entrant must be 18+ and confirm SF on October 6, 2026, or record an AI Worth Using segment before the event. |
 | Verification and one-click availability | **Blocked** | After the image boots and the agent works, the organizer/admin must verify the listing and enable one-click deploy. No verification or one-click deployment is confirmed. |
 | Plow build path | **Blocked** | The current official Plow base default is a prohibited old model in this project context. Its viability cannot be assumed, and no fallback or replacement route is authorized here. Validate an approved explicit model route before using Plow. |
 
 ## Verified development progress, September 24
 
-Eight focused workflow and preserved experiment tests passed. Real mode was checked with fictional test records only, including a valid review and malformed status rejection. Artifact permissions were checked. The fresh dedicated gateway passed config validation and health on loopback 20789; launcher and installed workflow documentation were present. No model inference, real applicant review, collaborator interaction or Index submission was performed. The OpenAI generated repository cover is published with source. [Demo recording plan](DEMO.md).
+Eight focused workflow and preserved experiment tests passed. Real mode was checked with fictional test records only, including a valid review and malformed status rejection. Artifact permissions were checked. The fresh dedicated gateway passed config validation and health on loopback 20789; launcher and installed workflow documentation were present. A later isolated engineering run completed the full prepare, model draft and validate flow through NVIDIA GLM 5.3 in 174.5 seconds. Saved artifacts passed independent validation and were private (0600 in a 0700 directory). Its fictional input exercised the real-mode schema; it was not a real applicant review. The scoped collector read nonzero usage matching the native run metadata. No collaborator interaction or Index submission occurred. The OpenAI generated repository cover is published with source. [Demo recording plan](DEMO.md).
 
 ## Dates
 
@@ -63,3 +63,11 @@ Current official OpenAI documentation lists GPT-6 Astra, Sol and Luna, GPT Image
 [DevDay is September 29](https://openai.com/index/devday-2026/), after the September 28 submission deadline. Submit with current products. Evaluate later announcements only if they solve a measured problem without risking the entry; no unannounced capability is a dependency.
 
 Essential verification only: fresh install and restart, useful owner task, genuine collaborator interaction with access boundaries, one accepted correctly attributed usage report, and signed out listing/video access. A green unit test or generated cover satisfies none of those live gates.
+
+## Current pre-video finish line
+
+The existing folder contains recruiting research and fictional experiments, but no actual hiring queue or collaborator setup. The user confirmed that these may not have been created. An engineering check cannot create genuine hiring authority or another human participant.
+
+Completed: native live workflow check, isolated usage preview, verification-state publication guard, local Docker startup and identity-preserving restart. [Container instructions](CONTAINER.md). The standalone GLM code-review request hit its output cap and returned no usable review; no fallback or retry ran. The separate native GLM workflow completed and was independently checked.
+
+Remaining: identify an actual recruiting job and authorized collaborator/channel; obtain the official Plow login credential for the Index; register and verify accepted real usage; obtain organizer verification and one click availability. No Plow token or scoped Index registration file was found in the documented paths. Public source and container preparation can proceed independently. Stop before video.

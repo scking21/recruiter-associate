@@ -1,0 +1,18 @@
+services:
+  recruiter:
+    build: .
+    image: recruiter-associate:local
+    init: true
+    ports:
+      - "127.0.0.1:20790:20789"
+    environment:
+      NVIDIA_API_KEY: ${NVIDIA_API_KEY:?Supply your authorized NVIDIA_API_KEY in the shell}
+    volumes:
+      - recruiter-state:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: "no"
+volumes:
+  recruiter-state:

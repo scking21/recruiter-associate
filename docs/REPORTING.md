@@ -90,3 +90,7 @@ The [official publish guide](https://aiworthusing.com/agent-index/publish) reque
 ```
 
 This is a template, not an installed schedule. The wrapper rechecks the dedicated store and approved model on each run, refuses an empty report, and never registers or creates a report key in report mode. Keep its output private. Stop the job if a report is rejected or the agent's usage attribution changes; do not generate extra model traffic to test the leaderboard.
+
+## Excluding engineering verification
+
+Place a `DO-NOT-REPORT` marker in any state used for engineering fixtures or smoke checks. The wrapper refuses both registration and publication for that state before reading credentials or making a request. Read only previews remain available for collector verification. Never remove that marker to count tests as real adoption. The September 24 live workflow check used a separate marked state; its counters were previewed locally and not transmitted.

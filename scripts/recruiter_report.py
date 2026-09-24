@@ -222,6 +222,9 @@ def _parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
+    if (args.report or args.register) and (args.state_dir.expanduser().resolve() / "DO-NOT-REPORT").exists():
+        print("recruiter report refused: this state is marked as engineering verification only", file=sys.stderr)
+        return 2
     if args.register and not os.environ.get("PLOW_AGENT_TOKEN"):
         print("recruiter report refused: --register requires PLOW_AGENT_TOKEN", file=sys.stderr)
         return 2
