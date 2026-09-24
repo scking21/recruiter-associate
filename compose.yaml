@@ -1,7 +1,7 @@
 services:
   recruiter:
     build: .
-    image: recruiter-associate:local
+    image: ${RECRUITER_IMAGE:-recruiter-associate:local}
     init: true
     ports:
       - "127.0.0.1:20790:20789"

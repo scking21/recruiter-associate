@@ -17,13 +17,13 @@ The named volume `recruiter-state` retains config, workspace, conversations and 
 
 ## Browser pairing
 
-The browser still needs OpenClaw authentication. The container's gateway token is private state and must never be published or shared with applicants. For private owner pairing, obtain a dashboard link inside the container with the scoped environment:
+The browser still needs OpenClaw authentication. In your own private terminal, ask OpenClaw for its owner pairing link:
 
 ```sh
-docker compose exec recruiter python3 scripts/recruiter_agent.py --root /data/recruiter dashboard --no-open
+docker compose exec recruiter sh -c 'export OPENCLAW_CONFIG_PATH=/data/recruiter/openclaw.json; export RECRUITER_OPENCLAW_GATEWAY_TOKEN="$(cat /data/recruiter/gateway-token)"; openclaw dashboard --no-open'
 ```
 
-This deliberately prints only the base URL, not the token. Use the native installation for an already paired owner UI until container pairing is completed. Public deployment requires separate transport and participant identity configuration; do not widen the host port binding just to get a demo link.
+Keep the resulting pairing link private. When opening it on this computer, change only the port from 20789 to the published host port 20790, leaving the rest of the link intact. Never share an owner pairing link with applicants. Public deployment requires separate transport and participant identity configuration; do not widen the host port binding just to get a demo link.
 
 ## Verification
 
