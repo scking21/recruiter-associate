@@ -15,6 +15,18 @@ The service runs as an unprivileged user. It listens inside the container on 207
 
 The named volume `recruiter-state` retains config, workspace, conversations and install identity. `docker compose stop` stops this project. Preserve the volume when updating; deleting it loses the installation identity and work. Automatic restart is disabled.
 
+## Published Linux image
+
+The [public package](https://github.com/users/scking21/packages/container/package/recruiter-associate) passed the clean Linux amd64 build and startup check in [GitHub Actions](https://github.com/scking21/recruiter-associate/actions/runs/36074530833). An anonymous pull succeeded on September 24.
+
+After supplying your NVIDIA credential, use this immutable Linux amd64 image without rebuilding:
+
+```sh
+RECRUITER_IMAGE=ghcr.io/scking21/recruiter-associate@sha256:ba2d8549fd07f67e8fd94113f92774c4379f86f620358c7a675b4c5d1762a92e docker compose up -d --no-build
+```
+
+On Apple Silicon, use the default build command above for native arm64. Both paths preserve the same Compose state volume. Package access is separate from Agent Index registration and organizer one click acceptance.
+
 ## Browser pairing
 
 The browser still needs OpenClaw authentication. In your own private terminal, ask OpenClaw for its owner pairing link:
@@ -29,4 +41,4 @@ Keep the resulting pairing link private. When opening it on this computer, chang
 
 On September 24, a local Linux arm64 image built successfully with OpenClaw 2026.9.5, Node 24.16.0 and Python 3.11. Fresh startup and authenticated gateway health passed. After restart, health passed again and the private gateway identity fingerprint was unchanged. No provider request ran inside the container.
 
-The manually dispatched repository workflow builds Linux amd64, checks gateway startup using a dummy credential without model requests, and publishes the image with a repository scoped GitHub token. Package visibility and anonymous pull must be verified separately before claiming a public ready to install image. This package is not the Plow base image and does not claim organizer one click compatibility.
+The manually dispatched repository workflow builds Linux amd64, checks gateway startup using a dummy credential without model requests, and publishes the image with a repository scoped GitHub token. Package visibility and anonymous pull have been verified. This package is not the Plow base image and does not claim organizer one click compatibility.
