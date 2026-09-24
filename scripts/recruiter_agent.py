@@ -155,6 +155,16 @@ def ensure_openclaw() -> str:
     executable = shutil.which("openclaw")
     if executable is None:
         raise InstallError("openclaw is not on PATH; install it before using this helper")
+    node = shutil.which("node")
+    if not node:
+        raise InstallError("Node.js is missing from PATH; use Node 24.16+ (24.x) or 26.1+")
+    try:
+        result = subprocess.run([node, "--version"], capture_output=True, text=True, timeout=10, check=True)
+        version = tuple(int(part) for part in result.stdout.strip().removeprefix("v").split("."))
+    except (ValueError, subprocess.SubprocessError) as error:
+        raise InstallError("cannot determine Node.js version; activate a supported Node runtime") from error
+    if len(version) != 3 or not ((24, 16, 0) <= version < (25, 0, 0) or version >= (26, 1, 0)):
+        raise InstallError(f"Node {result.stdout.strip()} on PATH is unsupported by OpenClaw 2026.9.5; activate Node 24.16+ (24.x) or 26.1+")
     return executable
 
 
@@ -184,7 +194,7 @@ def install_recruiter_launcher(workspace: Path, python: Path) -> None:
     skill_path = workspace / "skills" / "recruiter-associate" / "SKILL.md"
     skill_text = skill_path.read_text(encoding="utf-8")
     old_command = "python3 -m recruiter"
-    if old_command not in skill_text:
+    if old_command not in skill_text and "./recruiter-tool" not in skill_text:
         raise InstallError(f"copied skill does not contain its expected workflow command: {skill_path}")
     skill_path.write_text(skill_text.replace(old_command, "./recruiter-tool"), encoding="utf-8")
 
@@ -201,6 +211,7 @@ def prepare(root: Path, port: int, dry_run: bool) -> None:
         print(f"would configure agent {AGENT_ID} on loopback port {port}")
         return
 
+    ensure_openclaw()
     targets["root"].mkdir(parents=True, exist_ok=True)
     targets["workspace"].mkdir(mode=0o700)
     try:
@@ -214,6 +225,8 @@ def prepare(root: Path, port: int, dry_run: bool) -> None:
         skill_dir.parent.mkdir()
         shutil.copytree(REPO_ROOT / "skills" / "recruiter-associate", skill_dir)
         shutil.copy2(REPO_ROOT / "deploy" / "AGENTS.md", targets["workspace"] / "AGENTS.md")
+        (targets["workspace"] / "docs").mkdir()
+        shutil.copy2(REPO_ROOT / "docs" / "WORKFLOW.md", targets["workspace"] / "docs" / "WORKFLOW.md")
         install_recruiter_launcher(targets["workspace"], python)
         (targets["workspace"] / "inputs").mkdir()
         (targets["workspace"] / "work").mkdir()

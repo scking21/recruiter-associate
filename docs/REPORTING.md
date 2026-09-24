@@ -80,3 +80,13 @@ Do not treat a successful preview as Agent Index acceptance. Before using
 registration credential through the approved setup, register the public agent
 page with the official client, and verify the resulting report key and server
 acceptance. No live report was run while preparing this helper.
+
+## Five minute reporting after registration
+
+The [official publish guide](https://aiworthusing.com/agent-index/publish) requests reporting every five minutes. Keep scheduling disabled until this install has a scoped report key and one real report has been accepted. Preserve existing scheduler entries; add only this project's job. Use absolute paths for the chosen Python and repository, including quotes when paths contain spaces:
+
+```cron
+*/5 * * * * "/absolute/path/to/python3" "/absolute/path/to/recruiter-associate/scripts/recruiter_report.py" --state-dir "/absolute/path/to/recruiter-associate/runtime/openclaw-state" --report
+```
+
+This is a template, not an installed schedule. The wrapper rechecks the dedicated store and approved model on each run, refuses an empty report, and never registers or creates a report key in report mode. Keep its output private. Stop the job if a report is rejected or the agent's usage attribution changes; do not generate extra model traffic to test the leaderboard.

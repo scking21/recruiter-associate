@@ -1,6 +1,8 @@
 # Native OpenClaw installation
 
-Requirements: Python 3.10+, installed OpenClaw, and your own authorized NVIDIA credential. The installer was adapted from the verified Trail runtime fixes; this recruiter deployment must be checked separately before claiming live readiness.
+Requirements: Python 3.10+, Node 24.16+ within 24.x or Node 26.1+, installed OpenClaw 2026.9.5, and your own authorized NVIDIA credential. The installer was adapted from the verified Trail runtime fixes; this recruiter deployment must be checked separately before claiming live readiness.
+
+Check `python3 --version` and `node --version` first. With nvm, run `nvm use 24.16.0` (or a newer supported installed version) in every shell used below. On the development Mac, `/Users/corby/homebrew/bin/python3` is the supported Python; the system Python is too old. The helper refuses unsupported Node before creating state.
 
 ```sh
 git clone https://github.com/scking21/recruiter-associate.git
@@ -30,3 +32,7 @@ This is an owner environment, not a hostile participant sandbox. Workspace file 
 ## Repository extraction checks, September 24
 
 Fresh isolated configuration passed `openclaw config validate` on OpenClaw 2026.9.5. The installed pinned `recruiter-tool --help` command also passed. These checks did not launch a gateway or make a model request. The default macOS Python 3.9 was correctly rejected; this Mac used `/Users/corby/homebrew/bin/python3` (Python 3.14) to prepare the package. Use an interpreter of at least 3.10 on your machine.
+
+## Current local runtime check, September 24
+
+A fresh dedicated recruiter state was prepared with the final package, its pinned launcher and copied workflow documentation. OpenClaw configuration validation and gateway health passed (21 ms). The local gateway is listening on loopback port 20789. No model request, applicant processing, multiplayer interaction or usage report was performed. This development process has no reboot persistence; run the documented foreground start command after it stops. Do not run another start while it is already healthy.

@@ -1,4 +1,4 @@
-"""Offline preparation and validation for synthetic recruiter evidence."""
+"""Offline preparation and validation for bounded recruiter evidence reviews."""
 
 from .workflow import build_guarded_prompt, validate_response
 

@@ -5,16 +5,18 @@ import json
 from pathlib import Path
 from typing import Sequence
 
-from .workflow import build_guarded_prompt, load_json, parse_response, validate_response, write_or_validate
+from .workflow import build_guarded_prompt, bundle_mode, load_json, parse_response, validate_response, write_or_validate
 
 
 def prepare(input_path: Path, output_dir: Path) -> int:
     bundle = load_json(input_path)
+    mode = bundle_mode(bundle)
     prompt = build_guarded_prompt(bundle)
     snapshot = json.dumps(bundle, indent=2, sort_keys=True) + "\n"
-    write_or_validate(output_dir / "input.synthetic.json", snapshot)
-    write_or_validate(output_dir / "guarded.prompt.txt", prompt)
-    print(output_dir / "guarded.prompt.txt")
+    write_or_validate(output_dir / f"input.{mode}.json", snapshot)
+    prompt_name = "evidence-review.prompt.txt" if mode == "real" else "guarded.prompt.txt"
+    write_or_validate(output_dir / prompt_name, prompt)
+    print(output_dir / prompt_name)
     return 0
 
 
@@ -30,7 +32,7 @@ def validate(input_path: Path, response_path: Path, output_path: Path | None) ->
 
 
 def parser() -> argparse.ArgumentParser:
-    root = argparse.ArgumentParser(description="Prepare and validate synthetic recruiter evidence offline.")
+    root = argparse.ArgumentParser(description="Prepare and validate bounded recruiter evidence reviews offline.")
     commands = root.add_subparsers(dest="command", required=True)
     prepare_parser = commands.add_parser("prepare", help="write an immutable guarded prompt and input snapshot")
     prepare_parser.add_argument("--input", type=Path, required=True)

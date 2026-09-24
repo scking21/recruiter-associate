@@ -1,5 +1,7 @@
 # Recruiter associate
 
+![Recruiter Associate: Job evidence. Human decisions.](assets/recruiter-cover.png)
+
 An OpenClaw recruiter assistant that prepares cited, job related application reviews for a human hiring owner. The human retains hiring decisions and candidate communication.
 
 This is the separate recruiter entry for the [AI Worth Using OpenClaw 2.0 hackathon](https://luma.com/zhkhsnpa). It preserves the refined recruiter experiment and supplies an isolated native OpenClaw installer and scoped Agent Index tooling. It is not yet a verified hackathon submission.
@@ -17,7 +19,7 @@ For the dedicated OpenClaw agent, follow [INSTALL.md](docs/INSTALL.md). It uses 
 ## What is included
 
 - Frozen synthetic recruiter fixture, guarded prompt and deterministic evaluation code under `experiments/recruiter/`.
-- Local synthetic prompt preparation and review validation under `recruiter/`. The CLI currently refuses real applicant input; an authorized real hiring workflow remains to be implemented.
+- Offline prompt preparation and review validation under `recruiter/`. [Real mode](docs/WORKFLOW.md) requires explicit operator attestations and minimized evidence; it provides cited findings without candidate scores or rankings. No real applicant run has been verified.
 - Recruiter skill and founder review instructions.
 - Native installer with a pinned Python launcher and streaming usage accounting enabled.
 - Official Agent Index client and a wrapper limited to this agent's usage store. See [REPORTING.md](docs/REPORTING.md).
@@ -26,7 +28,7 @@ Historical experiments reported the refined guarded arm passing seven fixture ga
 
 ## Hackathon finish line
 
-See [the rules and launch checklist](docs/HACKATHON.md). Still required: an authorized real startup hiring use case, actual OpenClaw multiplayer use, a working install path proven by another operator, accepted Agent Index registration/reporting, organizer verification, and a published video of at least 60 seconds. Synthetic applicants and test runs are not real usage.
+See [the rules and launch checklist](docs/HACKATHON.md). Still required: a verified run for an authorized real startup hiring use case, actual OpenClaw multiplayer use, a working install path proven by another operator, accepted Agent Index registration/reporting, organizer verification, and a published video of at least 60 seconds. Synthetic applicants and test runs are not real usage.
 
 The intended multiplayer flow is an authorized hiring owner and collaborator reviewing cited findings and recording their own decisions in a shared OpenClaw conversation. Applicant material is untrusted input. Candidate facing access requires separate isolation and consent; this repository does not expose an owner gateway publicly.
 
