@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+umask 077
+export PYTHONPATH=/opt/recruiter
+exec python3 -m recruiter "$@"

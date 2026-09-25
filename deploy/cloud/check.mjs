@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { renderConfig } from '/opt/plow/boot/config.js';
+
+const identity = { agent: { name: 'Recruiter check' }, line: { uid: 'ln_check' }, chats: [] };
+delete process.env.RECRUITER_CLOUD_MODEL;
+assert.throws(() => renderConfig(identity, 'http://127.0.0.1:1'), /approval required/);
+process.env.RECRUITER_CLOUD_MODEL = 'z-ai/glm-5.2';
+const config = renderConfig(identity, 'http://127.0.0.1:1');
+assert.deepEqual(config.agents.defaults.model, { primary: 'plow/z-ai/glm-5.2', fallbacks: [] });
+assert.equal(config.models.providers.plow.apiKey, '${PLOW_AGENT_TOKEN}');
+assert.equal(config.models.providers.plow.models.length, 1);
+assert.equal(config.channels.plow.lineUid, 'ln_check');
+assert.equal(config.session.groupScope, 'per-group');
+assert(config.tools.deny.includes('message'));
+const reporter = readFileSync('/opt/plow/boot/agent-index.js', 'utf8');
+assert(reporter.includes('300_000'));
+assert(reporter.includes('OPENCLAW_STATE_DIR: process.env.OPENCLAW_STATE_DIR'));
+assert(reporter.includes('HOME: "/var/lib/plow"'));
+assert(reporter.includes('["--register", "--agent", agent]'));
+assert(!readFileSync('/opt/plow/prompt/AGENTS.md', 'utf8').includes('NVIDIA_API_KEY'));
+console.log('Cloud config and inherited reporting contract passed (offline; no usage submitted).');

@@ -1,0 +1,12 @@
+**
+!deploy/
+!deploy/cloud/
+!deploy/cloud/**
+!recruiter/
+!recruiter/*.py
+!experiments/
+!experiments/recruiter/
+!experiments/recruiter/*.py
+!docs/
+!docs/WORKFLOW.md
+!LICENSE
