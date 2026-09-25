@@ -16,7 +16,7 @@ This is the selected recruiter route. It supersedes the old Trail priority. The 
 | Demo video, at least 60 seconds | **Deferred by user** | Stop before video creation or publication. No video work is part of this run. |
 | Team, age, and event attendance | **Unverified** | Team limit is four people. Each entrant must be 18+ and confirm SF on October 6, 2026, or record an AI Worth Using segment before the event. |
 | Verification and one-click availability | **Blocked** | After the image boots and the agent works, the organizer/admin must verify the listing and enable one-click deploy. No verification or one-click deployment is confirmed. |
-| Plow build path | **Blocked** | The current official Plow base default is a prohibited old model in this project context. Its viability cannot be assumed, and no fallback or replacement route is authorized here. Validate an approved explicit model route before using Plow. |
+| Plow build path | **Cloud variant prepared; route approval pending** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The hosted Plow GLM 5.2 route needs explicit approval under the current project policy; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
 
 ## Verified development progress, September 24
 
@@ -80,6 +80,12 @@ The user authorized simulated participants for technical verification, with genu
 
 Plow phone activation succeeded. The public Index listing and its install link were verified without sign-in; native registration produced a private scoped report key. No usage POST or schedule was activated. Registration now works before a usage database exists, without fabricating traffic.
 
-Remaining setup: organizer verification and one-click admission, including confirming this native OpenClaw image meets their hosting contract. The contract URL linked by the official CLI README returned 404, so compatibility is not assumed. A ready organizer request is stored privately; it has not been sent. Genuine user tasks and accepted reports remain pending. Video remains deferred.
+Remaining setup: organizer verification and one-click admission, including confirming this native OpenClaw image meets their hosting contract. The contract URL linked by the official CLI README returned 404, so compatibility is not assumed. The organizer request was posted in the official hackathon support channel on September 24 at 8:46 pm Chicago time: [Discord message](https://discord.com/channels/1519035948191449268/1544106357865586718/1552858713025413120). Verification and image compatibility confirmation remain pending. Genuine user tasks and accepted reports remain pending. Video remains deferred.
 
 Container refresh after the registration fix passed GitHub Actions build/startup/publication in run [36082699740](https://github.com/scking21/recruiter-associate/actions/runs/36082699740). Anonymous manifest access returned HTTP200 for `sha256:65aed9fa2b2bd6d88cb749a467098fc9f5f43c608bb9de32f59e29f8e9152816`. Full image pull was verified for the earlier image; this refresh checked manifest access without consuming local Docker storage.
+
+## Hosted integration, September 25
+
+The organizers confirmed the public image is accessible but requested Plow messaging, automatic per-install reporting, and host-supported credentials; they do not inject NVIDIA_API_KEY. [Direct reply](https://discord.com/channels/1519035948191449268/1544106357865586718/1552884751155863612). The user authorized this integration.
+
+Cloud source is prepared in deploy/cloud using an immutable official Plow base. It inherits messaging, fresh-install registration, persistent install state, and five-minute reporting. A recruiter config wrapper removes the fallback and cross-conversation send tools. Its model route is deliberately unset pending the user decision about Plow GLM 5.2. Native NVIDIA installs are separate. [Cloud instructions and remaining gates](CLOUD.md). [Network-disabled build and actual gateway/plugin probe passed](https://github.com/scking21/recruiter-associate/actions/runs/36174574457) in 1m41s; no cloud model calls, deployment, simulated report, organizer follow-up, or video work has occurred.

@@ -39,12 +39,17 @@ When the intake is complete, assemble the real-mode input with only these fields
 
 The example values are placeholders, not facts. Set the three attestation flags to `true` only for assertions the owner or operator actually made. IDs must use lowercase letters, digits, underscores, or hyphens, start with a letter or digit, and have at most 64 characters. Keep real input under `/var/lib/plow/workspace/work/`, with owner-only file permissions. This limits local access but does not isolate conversations; use only the authorized conversation's evidence. Do not put it in tracked source or a public example.
 
-Run from `/var/lib/plow/workspace`. Choose a new directory for every review and retain its exact path for the rest of that review. Save the assembled JSON as `$review_dir/input.json` before preparing:
+Run from `/var/lib/plow/workspace`. Choose a new directory for every review and retain its exact path for the rest of that review:
 
 ```sh
 umask 077
 review_dir="work/reviews/$(python3 -c 'import uuid; print(uuid.uuid4().hex)')"
 mkdir -m 700 -p "$review_dir"
+```
+
+Save the assembled JSON as `$review_dir/input.json` with mode 0600. Only after that file exists, prepare it:
+
+```sh
 /usr/local/bin/recruiter-tool prepare --input "$review_dir/input.json" --output-dir "$review_dir/prepared"
 ```
 

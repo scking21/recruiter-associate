@@ -25,3 +25,5 @@ docker run --rm --network none -e AGENT_ID= -e RECRUITER_CLOUD_MODEL=z-ai/glm-5.
 The manual `Verify recruiter cloud container` GitHub workflow runs these checks without placing the base image on the developer's Mac. It does not deploy, publish an image, send messages, or submit usage.
 
 Our added code and prompt are MIT licensed. The upstream repository does not publish a root source license; we inherit its documented public base image and do not copy its source into this repository. Its components retain their own terms.
+
+Verified September 25: [GitHub run36174574457](https://github.com/scking21/recruiter-associate/actions/runs/36174574457) passed image build, config/reporting contract checks, recruiter CLI loading, and actual OpenClaw gateway/Plow plugin startup in 1m41s. Networking and Index reporting were disabled. No hosted model reply or accepted report is claimed. The pinned published base predates the upstream dashboard and email drain updates; the recruiter workflow does not enable cross-conversation sends.
