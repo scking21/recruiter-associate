@@ -27,3 +27,7 @@ The manual `Publish recruiter cloud container` GitHub workflow runs these checks
 Our added code and prompt are MIT licensed. The upstream repository does not publish a root source license; we inherit its documented public base image and do not copy its source into this repository. Its components retain their own terms.
 
 Verified September 25: [GitHub run36174574457](https://github.com/scking21/recruiter-associate/actions/runs/36174574457) passed image build, config/reporting contract checks, recruiter CLI loading, and actual OpenClaw gateway/Plow plugin startup in 1m41s. Networking and Index reporting were disabled. No hosted model reply or accepted report is claimed. The pinned published base predates the upstream dashboard and email drain updates; the recruiter workflow does not enable cross-conversation sends.
+
+Published September 25: `ghcr.io/scking21/recruiter-associate@sha256:d66103775763b06c969bab68ee175bffec20e6ffa390b54186c6520cc7fdd3a6`. [Publication and checks](https://github.com/scking21/recruiter-associate/actions/runs/36175691282) passed in 3m17s. Anonymous GHCR manifest/config access verified the baked-in model, AGENT_ID, persistent state path, and inherited boot command. No NVIDIA or Plow bearer is baked into the image. Digest sent as a reply to the organizer request; fresh hosted response, accepted per-install usage and one-click admission remain pending.
+
+[Organizer follow-up with published cloud digest](https://discord.com/channels/1519035948191449268/1544106357865586718/1553117041001496658).

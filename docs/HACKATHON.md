@@ -16,7 +16,7 @@ This is the selected recruiter route. It supersedes the old Trail priority. The 
 | Demo video, at least 60 seconds | **Deferred by user** | Stop before video creation or publication. No video work is part of this run. |
 | Team, age, and event attendance | **Unverified** | Team limit is four people. Each entrant must be 18+ and confirm SF on October 6, 2026, or record an AI Worth Using segment before the event. |
 | Verification and one-click availability | **Blocked** | After the image boots and the agent works, the organizer/admin must verify the listing and enable one-click deploy. No verification or one-click deployment is confirmed. |
-| Plow build path | **Cloud publication in progress** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The user approved hosted Plow GLM 5.2 on September 25; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
+| Plow build path | **Cloud image published; organizer checks pending** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The user approved hosted Plow GLM 5.2 on September 25; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
 
 ## Verified development progress, September 24
 
@@ -89,3 +89,7 @@ Container refresh after the registration fix passed GitHub Actions build/startup
 The organizers confirmed the public image is accessible but requested Plow messaging, automatic per-install reporting, and host-supported credentials; they do not inject NVIDIA_API_KEY. [Direct reply](https://discord.com/channels/1519035948191449268/1544106357865586718/1552884751155863612). The user authorized this integration.
 
 Cloud source is prepared in deploy/cloud using an immutable official Plow base. It inherits messaging, fresh-install registration, persistent install state, and five-minute reporting. A recruiter config wrapper removes the fallback and cross-conversation send tools. The user approved Plow GLM 5.2 with no fallback, and that setting is baked into the hosted image. Native NVIDIA installs are separate. [Cloud instructions and remaining gates](CLOUD.md). [Network-disabled build and actual gateway/plugin probe passed](https://github.com/scking21/recruiter-associate/actions/runs/36174574457) in 1m41s; no cloud model calls, deployment, simulated report, organizer follow-up, or video work has occurred.
+
+Cloud publication run [36175691282](https://github.com/scking21/recruiter-associate/actions/runs/36175691282) passed all offline checks and publication. New public digest: `ghcr.io/scking21/recruiter-associate@sha256:d66103775763b06c969bab68ee175bffec20e6ffa390b54186c6520cc7fdd3a6`. The digest and required integration details were sent to the organizers on September 25 at 1:52 pm Chicago, requesting their fresh hosted reply and separate installer usage verification. No live acceptance claimed.
+
+[Organizer follow-up with published cloud digest](https://discord.com/channels/1519035948191449268/1544106357865586718/1553117041001496658).
