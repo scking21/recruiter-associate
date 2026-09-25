@@ -1,8 +1,9 @@
-name: Verify recruiter cloud container
+name: Publish recruiter cloud container
 on:
   workflow_dispatch:
 permissions:
   contents: read
+  packages: write
 jobs:
   check:
     runs-on: ubuntu-24.04
@@ -18,4 +19,16 @@ jobs:
           docker run --rm --network none --entrypoint node recruiter-cloud:check /opt/recruiter/cloud-check.mjs
           docker run --rm --network none --entrypoint /usr/local/bin/recruiter-tool recruiter-cloud:check --help
       - name: Boot actual gateway and Plow plugin without network or reporting
-        run: docker run --rm --network none -e AGENT_ID= -e RECRUITER_CLOUD_MODEL=z-ai/glm-5.2 recruiter-cloud:check /opt/plow/probe
+        run: docker run --rm --network none -e AGENT_ID= recruiter-cloud:check /opt/plow/probe
+      - name: Publish verified cloud image
+        env:
+          IMAGE: ghcr.io/${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_ACTOR: ${{ github.actor }}
+        run: |
+          printf '%s' "$GH_TOKEN" | docker login ghcr.io -u "$GH_ACTOR" --password-stdin
+          docker tag recruiter-cloud:check "$IMAGE:cloud-$GITHUB_SHA"
+          docker tag recruiter-cloud:check "$IMAGE:cloud"
+          docker push "$IMAGE:cloud-$GITHUB_SHA"
+          docker push "$IMAGE:cloud"
+          docker logout ghcr.io

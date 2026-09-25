@@ -6,4 +6,6 @@ Use at most two subagents concurrently with distinct ownership. Preserve other a
 
 Use only explicitly authorized model routes. The included native installer selects NVIDIA z-ai/glm-5.3 with no fallback; retired GLM and temporary Qwen routes remain prohibited. Never commit credentials, resumes, applicant data, chat logs or private runtime files.
 
+On September 25, 2026 the user explicitly authorized Plow-hosted z-ai/glm-5.2 with no fallback for the cloud variant. This exception does not change native NVIDIA routing or reopen other retired routes.
+
 Keep human hiring decisions, authentic multiplayer, real installs, usage reporting, public source, video publication and organizer acceptance separate. Synthetic validation is not real applicant use or legal compliance. No outreach without explicit authorization.

@@ -17,5 +17,6 @@ RUN chmod 0755 /usr/local/bin/recruiter-tool
 ENV AGENT_ID=recruiter-associate AGENT_RUNTIME=OpenClaw \
     AGENT_NAME="Recruiter associate" \
     AGENT_BLURB="Cited job evidence reviews for human hiring decisions, shared with authorized collaborators."
-# Intentionally no model default until the operator authorizes the hosted route.
+# Approved September 25 for this hosted variant only; config removes fallbacks.
+ENV RECRUITER_CLOUD_MODEL=z-ai/glm-5.2
 USER node

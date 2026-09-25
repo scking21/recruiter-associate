@@ -8,11 +8,11 @@ The inherited channel handles Plow owner chats and group conversations. The recr
 
 The official reporter registers each installation using its Plow credential, persists its own Index key and ledger under `/var/lib/plow`, refreshes the collector, and reports every five minutes. Never bake the developer's Index key, account token, NVIDIA key, or runtime state into the image. Preserve the hosted volume across restarts; each separate installation needs its own volume. `AGENT_ID=recruiter-associate` enables this inherited reporter. Offline checks override it to empty and disable networking. No simulated usage should be reported.
 
-## Model approval gate
+## Approved hosted model
 
-The published base offers Plow's `z-ai/glm-5.2` route with a Claude fallback. This variant removes the fallback and requires an explicit `RECRUITER_CLOUD_MODEL=z-ai/glm-5.2` setting. **The project owner has not yet authorized that route.** Until resolved, the image has no default model and refuses normal startup. Offline config and gateway checks do not make a model request. NVIDIA GLM 5.3 remains the native installer route.
+The published base offers Plow's `z-ai/glm-5.2` route with a Claude fallback. This variant removes the fallback and requires an explicit `RECRUITER_CLOUD_MODEL=z-ai/glm-5.2` setting. The project owner explicitly approved this route on September 25, 2026. The cloud image sets it at build time, requiring no NVIDIA key or manual model setup. Offline config and gateway checks do not make a model request. NVIDIA GLM 5.3 remains the native installer route.
 
-After explicit route approval, bake the approved model setting into the cloud image so one-click installations require no extra environment setup. Publish a distinct `cloud` tag and immutable digest, then ask the organizers to verify a fresh hosted reply and usage attributed to separate installs. A passing offline probe does not establish either live behavior.
+The publication workflow produces a distinct `cloud` tag and immutable digest. The organizers must verify a fresh hosted reply and usage attributed to separate installs. A passing offline probe does not establish either live behavior.
 
 ## Build and verify
 
@@ -22,7 +22,7 @@ docker run --rm --network none --entrypoint node recruiter-cloud:check /opt/recr
 docker run --rm --network none -e AGENT_ID= -e RECRUITER_CLOUD_MODEL=z-ai/glm-5.2 recruiter-cloud:check /opt/plow/probe
 ```
 
-The manual `Verify recruiter cloud container` GitHub workflow runs these checks without placing the base image on the developer's Mac. It does not deploy, publish an image, send messages, or submit usage.
+The manual `Publish recruiter cloud container` GitHub workflow runs these checks without placing the base image on the developer's Mac. After checks pass it publishes the cloud image to GHCR. It does not deploy, send messages, or submit usage.
 
 Our added code and prompt are MIT licensed. The upstream repository does not publish a root source license; we inherit its documented public base image and do not copy its source into this repository. Its components retain their own terms.
 
