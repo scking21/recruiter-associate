@@ -24,7 +24,7 @@ ALLOWED_MODELS = frozenset({"z-ai/glm-5.3", "nvidia/z-ai/glm-5.3"})
 PUBLIC_NAME = "Recruiter associate"
 PUBLIC_BLURB = (
     "Prepares cited job-related evidence reviews for a human hiring owner; "
-    "external multiplayer and real applicant usage remain unverified."
+    "shared-session corrections tested with simulated participants. Human hiring decisions."
 )
 PUBLIC_REPO = "https://github.com/scking21/recruiter-associate"
 PUBLIC_INSTALL_URL = f"{PUBLIC_REPO}/blob/main/docs/INSTALL.md"
@@ -81,6 +81,23 @@ def _validate_state_dir(value: Path) -> tuple[Path, Path]:
     if stores != [store]:
         raise ReportingError("state directory does not have exactly one allowed store")
     return root, store
+
+
+def _validate_registration_dir(value: Path) -> Path:
+    """Allow registration before first use without manufacturing model usage."""
+    root = value.expanduser().resolve()
+    config = json.loads((root / "openclaw.json").read_text(encoding="utf-8"))
+    entries = config.get("agents", {}).get("entries", {})
+    if set(entries) != {AGENT_ID}:
+        raise ReportingError("registration requires the dedicated recruiter configuration")
+    model = entries[AGENT_ID].get("model", {})
+    if model.get("primary") not in ALLOWED_MODELS or model.get("fallbacks"):
+        raise ReportingError("registration requires the approved model without fallbacks")
+    if (root / "agents").exists():
+        others = [p.name for p in (root / "agents").iterdir() if p.is_dir() and p.name != AGENT_ID]
+        if others:
+            raise ReportingError("registration state contains other agents")
+    return root
 
 
 def _collect(client: Any, state_dir: Path, days: int) -> list[dict[str, Any]]:
@@ -236,7 +253,10 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     try:
         video_id = _validate_video_id(args.video_id)
-        state_dir, _store = _validate_state_dir(args.state_dir)
+        if args.register:
+            state_dir = _validate_registration_dir(args.state_dir)
+        else:
+            state_dir, _store = _validate_state_dir(args.state_dir)
         loaded = _load_client()
         if args.register:
             _register(loaded, state_dir, video_id)

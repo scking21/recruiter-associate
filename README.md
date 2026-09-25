@@ -28,7 +28,7 @@ Historical experiments reported the refined guarded arm passing seven fixture ga
 
 ## Hackathon finish line
 
-See [the rules and launch checklist](docs/HACKATHON.md). Still required: a verified run for an authorized real startup hiring use case, actual OpenClaw multiplayer use, a working install path proven by another operator, accepted Agent Index registration/reporting, organizer verification, and a published video of at least 60 seconds. Synthetic applicants and test runs are not real usage.
+The [public Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate) is registered. A [simulated multiplayer check](docs/MULTIPLAYER.md) verified separate profile attribution and a shared review correction. Still required: genuine user tasks and reported usage, an install proven by another operator, organizer verification, and a published video of at least 60 seconds. Synthetic applicants and test runs are excluded from reporting. See [the launch checklist](docs/HACKATHON.md).
 
 The intended multiplayer flow is an authorized hiring owner and collaborator reviewing cited findings and recording their own decisions in a shared OpenClaw conversation. Applicant material is untrusted input. Candidate facing access requires separate isolation and consent; this repository does not expose an owner gateway publicly.
 

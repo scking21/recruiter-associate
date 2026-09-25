@@ -83,6 +83,18 @@ acceptance. No live report was run while preparing this helper.
 
 ## Five minute reporting after registration
 
+Registration is allowed before the first real conversation. The helper verifies
+the dedicated agent configuration and approved model; it does not require an
+existing usage database or generate traffic to make one. Reporting still requires
+the real usage store and rejects empty reports. Every user installation needs its
+own private registration identity; never distribute the publisher's report key.
+
+The publisher completed registration on September 24. The public
+[listing](https://aiworthusing.com/agent-index/recruiter-associate) was checked in
+a signed out browser. Its scoped report key is stored privately with mode 0600.
+No usage was submitted and no reporting schedule is active. Enable the schedule
+only after a genuine task supplies reportable usage and its first report succeeds.
+
 The [official publish guide](https://aiworthusing.com/agent-index/publish) requests reporting every five minutes. Keep scheduling disabled until this install has a scoped report key and one real report has been accepted. Preserve existing scheduler entries; add only this project's job. Use absolute paths for the chosen Python and repository, including quotes when paths contain spaces:
 
 ```cron

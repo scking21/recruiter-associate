@@ -7,11 +7,11 @@ This is the selected recruiter route. It supersedes the old Trail priority. The 
 | Requirement or gate | State | Evidence and next action |
 | --- | --- | --- |
 | Real startup hiring use case | **Blocked** | The product must own a real recruiting job for this startup. Identify the hiring owner and the job they authorize the agent to do. |
-| OpenClaw 2.0 multiplayer | **Unverified** | The new repo has no confirmed OpenClaw 2.0 multiplayer run. The live flow must use an owner and an authorized collaborator who interact with the agent. Do not use fake applicants or invented collaborators. |
+| OpenClaw 2.0 multiplayer | **Simulation verified; real adoption pending** | Two distinct simulated profiles interacted in one shared session; the correction was retained. See [evidence](MULTIPLAYER.md). The solo builder approved simulation for engineering verification. Real users and usage remain separate. |
 | Human hiring authority | **Implemented; human use unverified** | The old synthetic protocol kept every disposition with a human and excluded protected information. Recheck that boundary in the real workflow; synthetic results are not hiring validation. |
 | Technical recruiter evidence | **Done in prior experiment** | The old repo records a refined guarded arm passing 7 of 7 synthetic gates. This is not evidence of real users, consent, adoption, or distribution. |
-| Public Agent Index listing | **Blocked** | No Index listing or registration exists. Public source and a public Linux amd64 container are available; local startup and restart passed. Index registration remains separate. |
-| MIT license and official client reporting | **Source/license ready; reporting unverified** | MIT LICENSE is present and the public repository is created. The vendored official client retains Apache 2.0; actual usage submission and acceptance remain unverified. |
+| Public Agent Index listing | **Registered and publicly verified** | [Listing](https://aiworthusing.com/agent-index/recruiter-associate) checked signed out. Scoped report key saved privately. No usage submitted. |
+| MIT license and official client reporting | **Registered; real reporting pending** | MIT LICENSE is present and the public repository is created. The vendored official client retains Apache 2.0; actual usage submission and acceptance remain unverified. |
 | Genuine usage and installs | **Blocked** | No confirmed real install or token usage exists. Use only genuine startup users and collaborators. Artificial usage, fabricated applicants, and self-generated leaderboard activity are prohibited. |
 | Demo video, at least 60 seconds | **Deferred by user** | Stop before video creation or publication. No video work is part of this run. |
 | Team, age, and event attendance | **Unverified** | Team limit is four people. Each entrant must be 18+ and confirm SF on October 6, 2026, or record an AI Worth Using segment before the event. |
@@ -35,11 +35,11 @@ The local CLI now supports explicitly attested, minimized real evidence bundles 
 
 ## Smallest launch sequence
 
-1. Confirm the real startup hiring owner, authorized collaborator, role, consent boundary, and human-only disposition boundary.
-2. Implement and exercise one OpenClaw 2.0 multiplayer flow with that owner and collaborator. Preserve evidence of the real work performed.
+1. Technical multiplayer simulation is complete. New users supply their actual hiring task and authorized collaborators. Preserve human hiring authority.
+2. Verify a genuine external installation and useful shared task; keep engineering simulation excluded from reporting.
 3. Choose an approved explicit model route. Do not rely on the prohibited Plow default.
 4. Keep the published MIT repository installable. Use the official bring your own agent path with the scoped client; a public container and admin verification are separate distribution work.
-5. Register the agent, schedule usage reporting, and verify a genuine install and reported usage. Ask the organizer/admin for verification and one-click deployment.
+5. Registration is complete. After the first genuine task, verify its accepted usage report and enable the reporting schedule. Ask the organizer/admin for verification and one-click deployment.
 6. Record a 60-second-or-longer demo of the real workflow, confirm entrant eligibility and team size, and submit before the Chicago equivalent of the PT deadline.
 
 ## Sources
@@ -52,7 +52,7 @@ The local CLI now supports explicitly attested, minimized real evidence bundles 
 
 Use the dedicated native agent with trusted hiring collaborators. OpenClaw documents multi user sessions, creator/owner attribution and participant history. Each person needs a distinct authenticated identity; two tabs using the same owner token do not prove two users. Keep the gateway private. Session visibility does not isolate tools, files or credentials. Select the actual collaborator and channel before configuring admission. [OpenClaw multi user mode](https://docs.openclaw.ai/concepts/multi-user).
 
-The official bring your own agent route permits the existing scoped collector. Obtain the Plow credential through the official login, register, verify an accepted report, then enable reporting every five minutes. No credentials or reporting schedule have been activated. Obtain admin verification and a working public container for the documented one click deployment flow. Do not switch to the Plow base merely to obtain a listing. [Publish instructions](https://aiworthusing.com/agent-index/publish).
+The official bring your own agent route permits the existing scoped collector. Obtain the Plow credential through the official login, register, verify an accepted report, then enable reporting every five minutes. Plow login and scoped registration are complete. Reporting remains disabled until genuine usage is available. Obtain admin verification and a working public container for the documented one click deployment flow. Do not switch to the Plow base merely to obtain a listing. [Publish instructions](https://aiworthusing.com/agent-index/publish).
 
 ## Build decisions, September 24
 
@@ -64,7 +64,7 @@ Current official OpenAI documentation lists GPT-6 Astra, Sol and Luna, GPT Image
 
 Essential verification only: fresh install and restart, useful owner task, genuine collaborator interaction with access boundaries, one accepted correctly attributed usage report, and signed out listing/video access. A green unit test or generated cover satisfies none of those live gates.
 
-## Current pre-video finish line
+## Earlier pre-video assessment (superseded by current status below)
 
 The existing folder contains recruiting research and fictional experiments, but no actual hiring queue or collaborator setup. The user confirmed that these may not have been created. An engineering check cannot create genuine hiring authority or another human participant.
 
@@ -73,3 +73,11 @@ Completed: native live workflow check, isolated usage preview, verification-stat
 Remaining: identify an actual recruiting job and authorized collaborator/channel; obtain the official Plow login credential for the Index; register and verify accepted real usage; obtain organizer verification and one click availability. No Plow token or scoped Index registration file was found in the documented paths. Public source and container preparation can proceed independently. Stop before video.
 
 Public container publication completed: [package](https://github.com/users/scking21/packages/container/package/recruiter-associate), [successful Linux build/startup](https://github.com/scking21/recruiter-associate/actions/runs/36074530833). Anonymous pull verified. Image digest: `sha256:ba2d8549fd07f67e8fd94113f92774c4379f86f620358c7a675b4c5d1762a92e`. Native arm64 Docker build also passed locally. Verification gateway stopped. Docker cleanup later failed: the internal host disk had only 142 MiB free and Docker Desktop reported unable to start. The container stop and local image removal are unconfirmed; persistent state was not deleted. Native owner gateway 20789 is separate. No reporting schedule, Index registration or video was activated.
+
+## Current status after solo multiplayer verification
+
+The user authorized simulated participants for technical verification, with genuine adoption expected after publication. [MULTIPLAYER.md](MULTIPLAYER.md) records the passed shared-session correction and distinct owner/participant identities. The isolated test gateway was stopped after verification; its state remains marked DO-NOT-REPORT. This does not claim human adoption or actual applicant work.
+
+Plow phone activation succeeded. The public Index listing and its install link were verified without sign-in; native registration produced a private scoped report key. No usage POST or schedule was activated. Registration now works before a usage database exists, without fabricating traffic.
+
+Remaining setup: organizer verification and one-click admission, including confirming this native OpenClaw image meets their hosting contract. The contract URL linked by the official CLI README returned 404, so compatibility is not assumed. A ready organizer request is stored privately; it has not been sent. Genuine user tasks and accepted reports remain pending. Video remains deferred.
