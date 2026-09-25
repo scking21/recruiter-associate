@@ -16,7 +16,7 @@ This is the selected recruiter route. It supersedes the old Trail priority. The 
 | Demo video, at least 60 seconds | **Deferred by user** | Stop before video creation or publication. No video work is part of this run. |
 | Team, age, and event attendance | **Unverified** | Team limit is four people. Each entrant must be 18+ and confirm SF on October 6, 2026, or record an AI Worth Using segment before the event. |
 | Verification and one-click availability | **Blocked** | After the image boots and the agent works, the organizer/admin must verify the listing and enable one-click deploy. No verification or one-click deployment is confirmed. |
-| Plow build path | **Cloud variant prepared; route approval pending** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The hosted Plow GLM 5.2 route needs explicit approval under the current project policy; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
+| Plow build path | **Cloud publication in progress** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The user approved hosted Plow GLM 5.2 on September 25; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
 
 ## Verified development progress, September 24
 
@@ -37,7 +37,7 @@ The local CLI now supports explicitly attested, minimized real evidence bundles 
 
 1. Technical multiplayer simulation is complete. New users supply their actual hiring task and authorized collaborators. Preserve human hiring authority.
 2. Verify a genuine external installation and useful shared task; keep engineering simulation excluded from reporting.
-3. Choose an approved explicit model route. Do not rely on the prohibited Plow default.
+3. Hosted route approved: Plow GLM 5.2 with no fallback. Native installs remain NVIDIA GLM 5.3.
 4. Keep the published MIT repository installable. Use the official bring your own agent path with the scoped client; a public container and admin verification are separate distribution work.
 5. Registration is complete. After the first genuine task, verify its accepted usage report and enable the reporting schedule. Ask the organizer/admin for verification and one-click deployment.
 6. Record a 60-second-or-longer demo of the real workflow, confirm entrant eligibility and team size, and submit before the Chicago equivalent of the PT deadline.
@@ -88,4 +88,4 @@ Container refresh after the registration fix passed GitHub Actions build/startup
 
 The organizers confirmed the public image is accessible but requested Plow messaging, automatic per-install reporting, and host-supported credentials; they do not inject NVIDIA_API_KEY. [Direct reply](https://discord.com/channels/1519035948191449268/1544106357865586718/1552884751155863612). The user authorized this integration.
 
-Cloud source is prepared in deploy/cloud using an immutable official Plow base. It inherits messaging, fresh-install registration, persistent install state, and five-minute reporting. A recruiter config wrapper removes the fallback and cross-conversation send tools. Its model route is deliberately unset pending the user decision about Plow GLM 5.2. Native NVIDIA installs are separate. [Cloud instructions and remaining gates](CLOUD.md). [Network-disabled build and actual gateway/plugin probe passed](https://github.com/scking21/recruiter-associate/actions/runs/36174574457) in 1m41s; no cloud model calls, deployment, simulated report, organizer follow-up, or video work has occurred.
+Cloud source is prepared in deploy/cloud using an immutable official Plow base. It inherits messaging, fresh-install registration, persistent install state, and five-minute reporting. A recruiter config wrapper removes the fallback and cross-conversation send tools. The user approved Plow GLM 5.2 with no fallback, and that setting is baked into the hosted image. Native NVIDIA installs are separate. [Cloud instructions and remaining gates](CLOUD.md). [Network-disabled build and actual gateway/plugin probe passed](https://github.com/scking21/recruiter-associate/actions/runs/36174574457) in 1m41s; no cloud model calls, deployment, simulated report, organizer follow-up, or video work has occurred.

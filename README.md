@@ -6,6 +6,10 @@ An OpenClaw recruiter assistant that prepares cited, job related application rev
 
 This is the separate recruiter entry for the [AI Worth Using OpenClaw 2.0 hackathon](https://luma.com/zhkhsnpa). It preserves the refined recruiter experiment and supplies an isolated native OpenClaw installer and scoped Agent Index tooling. It is not yet a verified hackathon submission.
 
+## Plow cloud hosting
+
+The [cloud variant](docs/CLOUD.md) uses the official Plow OpenClaw base for messaging and automatic usage reporting per installation. It uses the approved Plow GLM 5.2 route with no fallback and needs no NVIDIA key. One-click admission and a fresh hosted reply remain subject to organizer verification.
+
 ## Run locally
 
 Python 3.10+ is required. Start with the network free recruiter CLI:
