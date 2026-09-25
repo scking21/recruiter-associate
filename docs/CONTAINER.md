@@ -22,7 +22,7 @@ The [public package](https://github.com/users/scking21/packages/container/packag
 After supplying your NVIDIA credential, use this immutable Linux amd64 image without rebuilding:
 
 ```sh
-RECRUITER_IMAGE=ghcr.io/scking21/recruiter-associate@sha256:ba2d8549fd07f67e8fd94113f92774c4379f86f620358c7a675b4c5d1762a92e docker compose up -d --no-build
+RECRUITER_IMAGE=ghcr.io/scking21/recruiter-associate@sha256:65aed9fa2b2bd6d88cb749a467098fc9f5f43c608bb9de32f59e29f8e9152816 docker compose up -d --no-build
 ```
 
 On Apple Silicon, use the default build command above for native arm64. Both paths preserve the same Compose state volume. Package access is separate from Agent Index registration and organizer one click acceptance.
