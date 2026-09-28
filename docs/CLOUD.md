@@ -1,5 +1,11 @@
 # Plow hosted variant
 
+## Registry outage recovery
+
+Run `36467808939` passed the new source tests but could not fetch the original pinned ECR manifest: HTTP 429, data limit exceeded. The workflow now offers `reuse_verified_release`, default false. Setting it true builds from the exact earlier verified Roletrace image `sha256:ad99da3f5bf6643f52df1a614036ce17c98c2547cd1645dc15f3ed2c4839fde4` on GHCR. The choice is hardcoded, not an arbitrary image input. That parent preserves the same upstream runtime and approved model; it is not a provider fallback.
+
+The Dockerfile preserves an existing original `config-upstream.js` so it never wraps the Roletrace wrapper recursively. All source copies, offline config checks, packaged presentation tests and network-disabled gateway/plugin probe still run. This source delta adds or changes copied files and removes none; before reusing the recovery path for a future delta, check for deleted overlay files that would otherwise persist in the parent. Upstream assurance comes from the prior verified build rather than a fresh ECR pull. Promotion to the Index remains a separate step after a successful build.
+
 This variant addresses the organizer's [September 24 reply](https://discord.com/channels/1519035948191449268/1544106357865586718/1552884751155863612): Plow messaging, automatic per-install reporting, and host-supported credentials.
 
 It inherits the official [Plow OpenClaw base](https://github.com/plow-pbc/plow-openclaw-agent/tree/7ce757a1745de286dd180c5c5182aca31eba8a75), pinned to published digest `sha256:6e5e1a11a8c6e2ef6ecaa5e7b429e778a9a3befaf416a09922aaaa4a5b21d647`. The runtime is OpenClaw 2026.9.4. Do not attach the native 2026.9.5 state volume: that would be an unsupported database downgrade.

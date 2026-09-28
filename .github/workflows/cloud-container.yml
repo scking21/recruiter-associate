@@ -1,6 +1,11 @@
 name: Publish Roletrace cloud container
 on:
   workflow_dispatch:
+    inputs:
+      reuse_verified_release:
+        description: Reuse the September 28 verified runtime if the upstream registry is unavailable
+        type: boolean
+        default: false
 permissions:
   contents: read
   packages: write
@@ -15,7 +20,14 @@ jobs:
       - name: Check review workflow and fictional adversarial cases offline
         run: python3 -m unittest discover -s recruiter -t . -v
       - name: Build pinned Plow variant
-        run: docker build -f deploy/cloud/Dockerfile -t recruiter-cloud:check .
+        env:
+          REUSE_VERIFIED_RELEASE: ${{ inputs.reuse_verified_release }}
+        run: |
+          if [ "$REUSE_VERIFIED_RELEASE" = "true" ]; then
+            docker build -f deploy/cloud/Dockerfile -t recruiter-cloud:check --build-arg PLOW_BASE=ghcr.io/scking21/recruiter-associate@sha256:ad99da3f5bf6643f52df1a614036ce17c98c2547cd1645dc15f3ed2c4839fde4 .
+          else
+            docker build -f deploy/cloud/Dockerfile -t recruiter-cloud:check .
+          fi
       - name: Check config, reporting contract and workflow tool offline
         run: |
           docker run --rm --network none --entrypoint node recruiter-cloud:check /opt/recruiter/cloud-check.mjs
