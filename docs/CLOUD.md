@@ -31,3 +31,7 @@ Verified September 25: [GitHub run36174574457](https://github.com/scking21/recru
 Published September 25: `ghcr.io/scking21/recruiter-associate@sha256:d66103775763b06c969bab68ee175bffec20e6ffa390b54186c6520cc7fdd3a6`. [Publication and checks](https://github.com/scking21/recruiter-associate/actions/runs/36175691282) passed in 3m17s. Anonymous GHCR manifest/config access verified the baked-in model, AGENT_ID, persistent state path, and inherited boot command. No NVIDIA or Plow bearer is baked into the image. Digest sent as a reply to the organizer request; fresh hosted response, accepted per-install usage and one-click admission remain pending.
 
 [Organizer follow-up with published cloud digest](https://discord.com/channels/1519035948191449268/1544106357865586718/1553117041001496658).
+
+## September 28 intake update
+
+Source commit `63545e2` simplifies conversational intake and assigns neutral internal IDs without weakening explicit authorization or source assertions. [Build 36422188892](https://github.com/scking21/recruiter-associate/actions/runs/36422188892) passed offline configuration and actual gateway/plugin startup checks. Published image: `ghcr.io/scking21/recruiter-associate@sha256:5fb6c312f188b043cbf4493927d1b2b3515e480bce45f119dfbabd27dcb42910`. Plow promotion succeeded and the enabled pin was read back at 2026-09-28T12:32:55+00:00. This supersedes the earlier digest for new installs only. Existing agents are unchanged. Fresh hosted inference and real-user review are not established by these offline checks.
