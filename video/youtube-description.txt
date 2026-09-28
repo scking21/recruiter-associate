@@ -5,7 +5,7 @@ Roletrace prepares cited, job-related evidence reviews for a human hiring owner.
 This 94-second controlled demonstration shows a fictional minimized evidence bundle, a saved agent response, fresh offline validation, and a summary of a verified shared-session simulation. It is not real applicant processing or a recording of real collaborators. Human hiring decisions and candidate communication stay with people.
 
 Agent Index: https://aiworthusing.com/agent-index/recruiter-associate
-MIT source and installation: https://github.com/scking21/recruiter-associate
+MIT source and installation: https://github.com/scking21/roletrace
 
 The video uses an OpenAI-generated cover, Codex-authored motion and captions, and ElevenLabs Brian synthetic narration. The demonstrated saved recruiter response came from the project's authorized GLM runtime; OpenAI visual assets do not imply OpenAI powers the recruiter.
 

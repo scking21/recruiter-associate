@@ -5,8 +5,8 @@ Requirements: Python 3.10+, Node 24.16+ within 24.x or Node 26.1+, installed Ope
 Check `python3 --version` and `node --version` first. With nvm, run `nvm use 24.16.0` (or a newer supported installed version) in every shell used below. On the development Mac, `/Users/corby/homebrew/bin/python3` is the supported Python; the system Python is too old. The helper refuses unsupported Node before creating state.
 
 ```sh
-git clone https://github.com/scking21/recruiter-associate.git
-cd recruiter-associate
+git clone https://github.com/scking21/roletrace.git
+cd roletrace
 python3 scripts/recruiter_agent.py prepare
 # Supply NVIDIA_API_KEY from your credential manager; never commit it.
 python3 scripts/recruiter_agent.py start

@@ -1,5 +1,5 @@
 FROM node:24.16.0-bookworm-slim
-LABEL org.opencontainers.image.source="https://github.com/scking21/recruiter-associate" \
+LABEL org.opencontainers.image.source="https://github.com/scking21/roletrace" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.description="Roletrace evidence review with human hiring decisions"
 

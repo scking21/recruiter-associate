@@ -2,7 +2,7 @@
 ARG PLOW_BASE=public.ecr.aws/e1h7x4a2/plow-cloud-agents:base-7ce757a1745de286dd180c5c5182aca31eba8a75@sha256:6e5e1a11a8c6e2ef6ecaa5e7b429e778a9a3befaf416a09922aaaa4a5b21d647
 FROM ${PLOW_BASE}
 USER root
-LABEL org.opencontainers.image.source="https://github.com/scking21/recruiter-associate" \
+LABEL org.opencontainers.image.source="https://github.com/scking21/roletrace" \
       org.opencontainers.image.description="Plow hosted Roletrace evidence review with human decisions"
 COPY recruiter/ /opt/recruiter/recruiter/
 COPY experiments/recruiter/ /opt/recruiter/experiments/recruiter/

@@ -17,7 +17,7 @@ The named volume `recruiter-state` retains config, workspace, conversations and 
 
 ## Published Linux image
 
-The [public package](https://github.com/users/scking21/packages/container/package/recruiter-associate) passed the clean Linux amd64 build and startup check in [GitHub Actions](https://github.com/scking21/recruiter-associate/actions/runs/36074530833). An anonymous pull succeeded on September 24.
+The [public package](https://github.com/users/scking21/packages/container/package/recruiter-associate) passed the clean Linux amd64 build and startup check in [GitHub Actions](https://github.com/scking21/roletrace/actions/runs/36074530833). An anonymous pull succeeded on September 24.
 
 After supplying your NVIDIA credential, use this immutable Linux amd64 image without rebuilding:
 
