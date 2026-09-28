@@ -60,7 +60,7 @@ The [public Agent Index listing](https://aiworthusing.com/agent-index/recruiter-
 
 The intended multiplayer flow is an authorized hiring owner and collaborator reviewing cited findings and recording their own decisions in a shared OpenClaw conversation. Applicant material is untrusted input. Candidate facing access requires separate isolation and consent; this repository does not expose an owner gateway publicly.
 
-The technical identifier `recruiter-associate` remains in existing install paths, skill names, registry coordinates, and public links to preserve existing installs and links. Roletrace is the display name; new installs use Roletrace; existing hosted instances keep their prior version. The builder’s local installed display name and prompt headings were migrated with backups, without changing reporting identity.
+The technical identifier `recruiter-associate` remains in existing install paths, skill names, registry coordinates, and the Agent Index URL to preserve existing installs and links. Roletrace is the display name; new installs use Roletrace; existing hosted instances keep their prior version. The builder’s local installed display name and prompt headings were migrated with backups, without changing reporting identity.
 
 ## Data and license
 
