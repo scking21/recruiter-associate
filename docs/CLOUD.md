@@ -22,7 +22,7 @@ docker run --rm --network none --entrypoint node recruiter-cloud:check /opt/recr
 docker run --rm --network none -e AGENT_ID= -e RECRUITER_CLOUD_MODEL=z-ai/glm-5.2 recruiter-cloud:check /opt/plow/probe
 ```
 
-The manual `Publish recruiter cloud container` GitHub workflow runs these checks without placing the base image on the developer's Mac. After checks pass it publishes the cloud image to GHCR. It does not deploy, send messages, or submit usage.
+The manual `Publish Roletrace cloud container` GitHub workflow runs these checks without placing the base image on the developer's Mac. After checks pass it publishes the cloud image to GHCR. It does not deploy, send messages, or submit usage.
 
 Our added code and prompt are MIT licensed. The upstream repository does not publish a root source license; we inherit its documented public base image and do not copy its source into this repository. Its components retain their own terms.
 

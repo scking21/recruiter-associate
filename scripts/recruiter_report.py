@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preview or explicitly publish Recruiter associate OpenClaw usage.
+"""Preview or explicitly publish Roletrace OpenClaw usage.
 
 The default command is read only.  It reads the one allowed OpenClaw agent
 store through the vendored Agent Index collector and prints aggregate counts.
@@ -21,7 +21,7 @@ from typing import Any, Iterator
 
 AGENT_ID = "recruiter-associate"
 ALLOWED_MODELS = frozenset({"z-ai/glm-5.3", "nvidia/z-ai/glm-5.3"})
-PUBLIC_NAME = "Recruiter associate"
+PUBLIC_NAME = "Roletrace"
 PUBLIC_BLURB = 'Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check.'
 PUBLIC_REPO = "https://github.com/scking21/recruiter-associate"
 PUBLIC_INSTALL_URL = f"{PUBLIC_REPO}/blob/main/docs/INSTALL.md"

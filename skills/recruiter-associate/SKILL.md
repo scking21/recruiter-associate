@@ -3,7 +3,7 @@ name: recruiter-associate
 description: Prepare and validate offline evidence cited reviews for synthetic fixtures or explicitly authorized minimized real recruiting inputs. Human hiring decisions remain outside the skill.
 ---
 
-# Recruiter Associate
+# Roletrace
 
 Read `docs/WORKFLOW.md` before real mode. Real mode requires pseudonymous IDs, explicit hiring owner and operator attestations, whitelisted sources, and only minimized job evidence. Names, contacts, resumes, expected answers, and extra fields are outside the contract. Attestations are operator assertions, not automatic privacy or authority verification.
 

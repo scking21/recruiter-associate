@@ -1,6 +1,8 @@
-# Recruiter associate
+# Roletrace
 
-![Recruiter Associate: Job evidence. Human decisions.](assets/recruiter-cover.png)
+Hiring evidence. Clear sources. Human decisions.
+
+![Roletrace: Hiring evidence. Clear sources. Human decisions.](assets/roletrace-cover.png)
 
 Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check. The human retains hiring decisions and candidate communication.
 
@@ -14,7 +16,7 @@ The [cloud variant](docs/CLOUD.md) uses the official Plow OpenClaw base for mess
 
 Open [Text this agent on Agent Index](https://aiworthusing.com/agent-index/recruiter-associate) and ask: “Help me review one work-sample excerpt against one job criterion.” The agent asks for missing authorization and source information, assigns neutral reference IDs, and prepares a cited draft after validation. Share only minimized evidence from an authorized source; hiring decisions stay with the owner.
 
-![Fictional evidence-review example](assets/recruiter-review-demo.png)
+![Fictional evidence-review example](assets/roletrace-review-demo.png)
 
 This screenshot shows a saved response to fictional input. It does not establish real applicant use. A [real-user pilot protocol](docs/PILOT.md) is prepared; participants are not yet available.
 
@@ -32,7 +34,7 @@ For a packaged install, see [Docker instructions](docs/CONTAINER.md). For the de
 
 - Frozen synthetic recruiter fixture, guarded prompt and deterministic evaluation code under `experiments/recruiter/`.
 - Offline prompt preparation and review validation under `recruiter/`. [Real mode](docs/WORKFLOW.md) requires explicit operator attestations and minimized evidence; it provides cited findings without candidate scores or rankings. No real applicant run has been verified.
-- Recruiter skill and founder review instructions.
+- Roletrace skill and founder review instructions.
 - Native installer with a pinned Python launcher and streaming usage accounting enabled.
 - Official Agent Index client and a wrapper limited to this agent's usage store. See [REPORTING.md](docs/REPORTING.md).
 
@@ -47,6 +49,8 @@ The [93-second narrated demo](https://www.youtube.com/watch?v=pefBDsbXzvU) is pu
 The [public Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate) is registered. A [simulated multiplayer check](docs/MULTIPLAYER.md) verified separate profile attribution and a shared review correction. Still required: genuine user tasks and reported usage, an install proven by another operator. Organizer verification and video publication are recorded in the current launch checklist. Synthetic applicants and test runs are excluded from reporting. See [the launch checklist](docs/HACKATHON.md).
 
 The intended multiplayer flow is an authorized hiring owner and collaborator reviewing cited findings and recording their own decisions in a shared OpenClaw conversation. Applicant material is untrusted input. Candidate facing access requires separate isolation and consent; this repository does not expose an owner gateway publicly.
+
+The technical identifier `recruiter-associate` remains in existing install paths, skill names, registry coordinates, and public links while those migrations are assessed. Roletrace is the display name; this source update does not rename an existing installation or change its reporting identity.
 
 ## Data and license
 

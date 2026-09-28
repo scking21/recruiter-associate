@@ -2,7 +2,7 @@
 FROM public.ecr.aws/e1h7x4a2/plow-cloud-agents:base-7ce757a1745de286dd180c5c5182aca31eba8a75@sha256:6e5e1a11a8c6e2ef6ecaa5e7b429e778a9a3befaf416a09922aaaa4a5b21d647
 USER root
 LABEL org.opencontainers.image.source="https://github.com/scking21/recruiter-associate" \
-      org.opencontainers.image.description="Plow hosted recruiter evidence review with human decisions"
+      org.opencontainers.image.description="Plow hosted Roletrace evidence review with human decisions"
 COPY recruiter/ /opt/recruiter/recruiter/
 COPY experiments/recruiter/ /opt/recruiter/experiments/recruiter/
 COPY docs/WORKFLOW.md /opt/recruiter/docs/WORKFLOW.md
@@ -15,7 +15,7 @@ COPY deploy/cloud/config.mjs /opt/plow/boot/config.js
 COPY deploy/cloud/check.mjs /opt/recruiter/cloud-check.mjs
 RUN chmod 0755 /usr/local/bin/recruiter-tool
 ENV AGENT_ID=recruiter-associate AGENT_RUNTIME=OpenClaw \
-    AGENT_NAME="Recruiter associate" \
+    AGENT_NAME="Roletrace" \
     AGENT_BLURB="Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check."
 # Approved September 25 for this hosted variant only; config removes fallbacks.
 ENV RECRUITER_CLOUD_MODEL=z-ai/glm-5.2

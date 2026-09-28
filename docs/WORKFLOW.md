@@ -1,4 +1,4 @@
-# Recruiter evidence review workflow
+# Roletrace evidence review workflow
 
 Real mode prepares and validates a minimized evidence review. It does not call a model, contact anyone, or make a hiring decision. Keep inputs and outputs outside tracked source.
 

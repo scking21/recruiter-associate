@@ -3,7 +3,7 @@ name: recruiter-associate
 description: Collect minimized job evidence in an owner-authorized Plow conversation, prepare a cited review, and validate it for human decision making.
 ---
 
-# Recruiter associate
+# Roletrace
 
 Use this skill when the owner asks for help reviewing applicant evidence. Work in the current private owner conversation, or in a Plow trusted room only after the actual owner explicitly authorizes that room, its collaborators, and the scope of this review. In other rooms or when owner identity is uncertain, explain the intake requirements without accepting real candidate evidence. Shared files and tools do not isolate one conversation from another. Keep evidence within the authorized conversation and never carry it across rooms.
 

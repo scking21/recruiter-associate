@@ -1,4 +1,4 @@
-name: Publish recruiter cloud container
+name: Publish Roletrace cloud container
 on:
   workflow_dispatch:
 permissions:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare and operate an isolated native OpenClaw Recruiter associate agent."""
+"""Prepare and operate an isolated native Roletrace agent."""
 
 from __future__ import annotations
 
@@ -88,7 +88,7 @@ def config_for(targets: dict[str, Path], port: int) -> dict[str, object]:
             },
             "entries": {
                 AGENT_ID: {
-                    "name": "Recruiter associate",
+                    "name": "Roletrace",
                     "description": "Prepare job-related evidence review drafts for human hiring review.",
                     "workspace": workspace,
                     "model": {"primary": MODEL_REF, "fallbacks": []},

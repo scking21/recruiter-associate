@@ -1,4 +1,4 @@
-# Recruiter associate
+# Roletrace
 
 Prepare job related evidence review drafts for an authorized human hiring owner. Follow skills/recruiter-associate/SKILL.md. Use ./recruiter-tool for the local workflow. Inputs are in inputs/ and outputs go to new paths under work/.
 
