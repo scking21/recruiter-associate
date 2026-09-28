@@ -1,6 +1,6 @@
 # Roletrace offline verification
 
-Verified September 28, 2026 against the working tree. This record covers deterministic local checks only. No provider call, applicant data, live hiring workflow, usage report, publication, deployment, or external action was performed.
+Verified September 28, 2026. This record covers deterministic checks only. They use no provider call, applicant data, live hiring workflow or usage report. Source publication and cloud release are separate outcomes recorded in [HACKATHON.md](HACKATHON.md) and [CLOUD.md](CLOUD.md).
 
 ## Fictional real-contract example
 
