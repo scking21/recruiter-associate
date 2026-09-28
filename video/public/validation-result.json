@@ -1,0 +1,14 @@
+{
+  "decision": "human_review_required",
+  "errors": [],
+  "injection_marker_hits": [],
+  "limitations": [
+    "Configured pattern checks are bounded and are not comprehensive protected or identifying information detection.",
+    "Validation checks structure and bounded safety invariants, not factual truth, consent, fairness, legal compliance, or hiring fitness.",
+    "A human remains responsible for every hiring, rejection, outreach, and disposition decision."
+  ],
+  "mode": "real",
+  "protected_term_hits": [],
+  "synthetic": false,
+  "valid": true
+}

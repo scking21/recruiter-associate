@@ -1,0 +1,237 @@
+{
+  "duration": 2580,
+  "scenes": [
+    {
+      "id": "Intro",
+      "from": 0,
+      "duration": 386,
+      "clips": [
+        {
+          "src": "audio/intro-0.wav",
+          "from": 18,
+          "duration": 156,
+          "text": "Roletrace prepares cited, job-related evidence for a human hiring owner."
+        },
+        {
+          "src": "audio/intro-1.wav",
+          "from": 186,
+          "duration": 166,
+          "text": "This controlled demo uses fictional applicants. Every hiring decision stays with a person."
+        }
+      ]
+    },
+    {
+      "id": "Inputs",
+      "from": 386,
+      "duration": 380,
+      "clips": [
+        {
+          "src": "audio/inputs-0.wav",
+          "from": 404,
+          "duration": 124,
+          "text": "Start with the job criteria and a small, authorized evidence bundle."
+        },
+        {
+          "src": "audio/inputs-1.wav",
+          "from": 540,
+          "duration": 192,
+          "text": "The workflow prepares a guarded prompt for OpenClaw. It keeps the review tied to the evidence the owner supplied."
+        }
+      ]
+    },
+    {
+      "id": "Findings",
+      "from": 766,
+      "duration": 429,
+      "clips": [
+        {
+          "src": "audio/findings-0.wav",
+          "from": 784,
+          "duration": 176,
+          "text": "Here is a saved response from the working agent. Each finding points back to a specific evidence ID."
+        },
+        {
+          "src": "audio/findings-1.wav",
+          "from": 972,
+          "duration": 189,
+          "text": "Missing evidence stays unknown. The output is a review for a person, without candidate scores or rankings."
+        }
+      ]
+    },
+    {
+      "id": "Validation",
+      "from": 1195,
+      "duration": 419,
+      "clips": [
+        {
+          "src": "audio/validation-0.wav",
+          "from": 1213,
+          "duration": 190,
+          "text": "Now run the validator against that saved response. It checks the required structure and citation references."
+        },
+        {
+          "src": "audio/validation-1.wav",
+          "from": 1415,
+          "duration": 165,
+          "text": "A passing check does not prove a hiring judgment. It means the review passed these defined checks."
+        }
+      ]
+    },
+    {
+      "id": "Multiplayer",
+      "from": 1614,
+      "duration": 575,
+      "clips": [
+        {
+          "src": "audio/multiplayer-0.wav",
+          "from": 1632,
+          "duration": 159,
+          "text": "In a separate shared-session simulation, the owner and manager used distinct profiles."
+        },
+        {
+          "src": "audio/multiplayer-1.wav",
+          "from": 1803,
+          "duration": 220,
+          "text": "The manager withdrew a Python debugging claim. The agent changed that finding to unverified and suggested evidence to request."
+        },
+        {
+          "src": "audio/multiplayer-2.wav",
+          "from": 2035,
+          "duration": 120,
+          "text": "These were simulated participants, not real hiring activity."
+        }
+      ]
+    },
+    {
+      "id": "Closing",
+      "from": 2189,
+      "duration": 391,
+      "clips": [
+        {
+          "src": "audio/closing-0.wav",
+          "from": 2207,
+          "duration": 195,
+          "text": "Roletrace is listed on Agent Index, with a hosted setup link and local installation instructions."
+        },
+        {
+          "src": "audio/closing-1.wav",
+          "from": 2414,
+          "duration": 132,
+          "text": "Explore the MIT source. Hiring evidence. Clear sources. Human decisions."
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 18,
+      "to": 174,
+      "text": "Roletrace prepares cited, job-related evidence for a human hiring owner."
+    },
+    {
+      "from": 186,
+      "to": 326,
+      "text": "This controlled demo uses fictional applicants. Every hiring decision stays with"
+    },
+    {
+      "from": 326,
+      "to": 352,
+      "text": "a person."
+    },
+    {
+      "from": 404,
+      "to": 528,
+      "text": "Start with the job criteria and a small, authorized evidence bundle."
+    },
+    {
+      "from": 540,
+      "to": 651,
+      "text": "The workflow prepares a guarded prompt for OpenClaw. It keeps the"
+    },
+    {
+      "from": 651,
+      "to": 732,
+      "text": "review tied to the evidence the owner supplied."
+    },
+    {
+      "from": 784,
+      "to": 892,
+      "text": "Here is a saved response from the working agent. Each finding"
+    },
+    {
+      "from": 892,
+      "to": 960,
+      "text": "points back to a specific evidence ID."
+    },
+    {
+      "from": 972,
+      "to": 1094,
+      "text": "Missing evidence stays unknown. The output is a review for a"
+    },
+    {
+      "from": 1094,
+      "to": 1161,
+      "text": "person, without candidate scores or rankings."
+    },
+    {
+      "from": 1213,
+      "to": 1344,
+      "text": "Now run the validator against that saved response. It checks the"
+    },
+    {
+      "from": 1344,
+      "to": 1403,
+      "text": "required structure and citation references."
+    },
+    {
+      "from": 1415,
+      "to": 1522,
+      "text": "A passing check does not prove a hiring judgment. It means"
+    },
+    {
+      "from": 1522,
+      "to": 1580,
+      "text": "the review passed these defined checks."
+    },
+    {
+      "from": 1632,
+      "to": 1778,
+      "text": "In a separate shared-session simulation, the owner and manager used distinct"
+    },
+    {
+      "from": 1778,
+      "to": 1791,
+      "text": "profiles."
+    },
+    {
+      "from": 1803,
+      "to": 1930,
+      "text": "The manager withdrew a Python debugging claim. The agent changed that"
+    },
+    {
+      "from": 1930,
+      "to": 2023,
+      "text": "finding to unverified and suggested evidence to request."
+    },
+    {
+      "from": 2035,
+      "to": 2155,
+      "text": "These were simulated participants, not real hiring activity."
+    },
+    {
+      "from": 2207,
+      "to": 2341,
+      "text": "Roletrace is listed on Agent Index, with a hosted setup"
+    },
+    {
+      "from": 2341,
+      "to": 2402,
+      "text": "link and local installation instructions."
+    },
+    {
+      "from": 2414,
+      "to": 2546,
+      "text": "Explore the MIT source. Hiring evidence. Clear sources. Human decisions."
+    }
+  ]
+}

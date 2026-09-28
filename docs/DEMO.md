@@ -1,19 +1,19 @@
-# Completed demo, September 28
+# Roletrace demo, September 28
 
-The downloadable public version is the YouTube link below. Files under `video/output/` are local build and verification artifacts, not committed downloads.
+[Watch the published Roletrace demo](https://www.youtube.com/watch?v=-CKQ7tGdFxE) or open the [Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate). It is unlisted, with signed-out Brave Private playback and Index embedded playback verified September 28, 2026 at 13:00 UTC.
 
-- Video: [`recruiter-associate-demo.mp4`](../video/output/recruiter-associate-demo.mp4), 93 seconds, 1080p/30fps, H.264 with AAC narration.
-- Captions: [`recruiter-associate-demo.srt`](../video/output/recruiter-associate-demo.srt); also burned into the video.
-- Editable source and provenance: [`video/README.md`](../video/README.md).
-- Publication copy: [`youtube-description.txt`](../video/youtube-description.txt).
+The video is 93.952 seconds, 1920×1080 at 30 fps, H.264/AAC, 14,103,885 bytes. Full decode and opening, findings, and corrected closing visuals passed. SHA-256: `05294b0740e5de6cea65011ba45a6cb8e1a7c9eda44102ce164da6a1c498b3c2`.
 
-This is a controlled demonstration using a saved fictional agent response, fresh offline validation, and a clearly labeled simulated multiplayer summary. It reuses the existing OpenAI-generated cover with Codex-authored motion and ElevenLabs Brian narration. No fresh recruiter model run, real applicant processing, or reported usage was needed.
+- Local export: `video/output/roletrace-demo.mp4` (not committed; the watch link is the public copy).
+- Captions: `video/output/roletrace-demo.elevenlabs.srt`, also burned in.
+- [Editable source and provenance](../video/README.md); [publication copy](../video/youtube-description.txt).
+- Local evidence: `video/output/roletrace-verification.json`, `roletrace-youtube-published.png`, `roletrace-youtube-signed-out.png`, and `roletrace-index-published.png`.
 
-Verified: full MP4 decode, 93.162667-second duration, 1920×1080 video, AAC audio, preserved six-scene visuals, revised closing attribution, and signed-out YouTube playback.
+This controlled demonstration uses fictional inputs, a saved agent response, fresh offline validation, and a clearly labeled simulated collaboration summary. No real applicant processing, fresh provider run, or reported usage was needed.
 
-Published [unlisted on YouTube](https://www.youtube.com/watch?v=pefBDsbXzvU) and [attached to Agent Index](https://aiworthusing.com/agent-index/recruiter-associate). Signed-out Brave Private playback and embedded playback verified September 28, 2026 at 11:56 UTC.
+The Roletrace cover was generated with OpenAI's built-in image tool. Brian - Relatable Everyman narration uses Eleven Multilingual v2. Opening and closing were regenerated for the new name; four clips were reused. This revision used 375 existing credits, leaving 6,309, with no purchase or upgrade. Captions use approximate proportional alignment.
 
-**Narration replaced:** Brian - Relatable Everyman, Eleven Multilingual v2. Six clips downloaded through Chrome using 1,247 existing credits, with no purchase. Natural scene timing follows the audio. Original Samantha export is preserved under `video/output/original-samantha`.
+Earlier videos remain preserved as historical exports: [Brian before rebrand](https://www.youtube.com/watch?v=pefBDsbXzvU) and [original local voice](https://www.youtube.com/watch?v=kbqJ_CwPnss). The active Index embed uses the new Roletrace video. Backups are in `video/output/pre-roletrace` and `video/output/original-samantha`.
 
 ## Original recording plan (historical)
 

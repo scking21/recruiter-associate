@@ -1,0 +1,211 @@
+{
+  "duration": 2817,
+  "fps": 30,
+  "scenes": [
+    {
+      "id": "Intro",
+      "from": 0,
+      "duration": 447,
+      "clips": [
+        {
+          "src": "audio-elevenlabs-normalized/intro.wav",
+          "from": 18,
+          "duration": 407,
+          "text": "Hiring reviews are hard to audit when the evidence is scattered. Roletrace brings each finding back to its source. This controlled demo uses fictional applicants. Every hiring decision stays with a person."
+        }
+      ]
+    },
+    {
+      "id": "Inputs",
+      "from": 447,
+      "duration": 408,
+      "clips": [
+        {
+          "src": "audio-elevenlabs-normalized/inputs.wav",
+          "from": 465,
+          "duration": 368,
+          "text": "Start with the job criteria and a small, authorized evidence bundle. The workflow prepares a guarded prompt for OpenClaw. It keeps the review tied to the evidence the owner supplied."
+        }
+      ]
+    },
+    {
+      "id": "Findings",
+      "from": 855,
+      "duration": 429,
+      "clips": [
+        {
+          "src": "audio-elevenlabs-normalized/findings.wav",
+          "from": 873,
+          "duration": 389,
+          "text": "Here is a saved response from the working agent. Each finding points back to a specific evidence ID. Missing evidence stays unknown. The output is a review for a person, without candidate scores or rankings."
+        }
+      ]
+    },
+    {
+      "id": "Validation",
+      "from": 1284,
+      "duration": 451,
+      "clips": [
+        {
+          "src": "audio-elevenlabs-normalized/validation.wav",
+          "from": 1302,
+          "duration": 411,
+          "text": "Now run the validator against that saved response. It checks the required structure and citation references. A passing check does not prove a hiring judgment. It means the review passed these defined checks."
+        }
+      ]
+    },
+    {
+      "id": "Multiplayer",
+      "from": 1735,
+      "duration": 628,
+      "clips": [
+        {
+          "src": "audio-elevenlabs-normalized/multiplayer.wav",
+          "from": 1753,
+          "duration": 588,
+          "text": "In a separate shared-session simulation, the owner and manager used distinct profiles. The manager withdrew a Python debugging claim. The agent changed that finding to unverified and suggested evidence to request. These were simulated participants, not real hiring activity."
+        }
+      ]
+    },
+    {
+      "id": "Closing",
+      "from": 2363,
+      "duration": 454,
+      "clips": [
+        {
+          "src": "audio-elevenlabs-normalized/closing.wav",
+          "from": 2381,
+          "duration": 414,
+          "text": "Roletrace is listed on Agent Index, with a hosted setup link and local installation instructions. Explore the MIT source. Hiring evidence. Clear sources. Human decisions."
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 18,
+      "to": 158,
+      "text": "Hiring reviews are hard to audit when the evidence is scattered."
+    },
+    {
+      "from": 158,
+      "to": 260,
+      "text": "Roletrace brings each finding back to its source."
+    },
+    {
+      "from": 260,
+      "to": 400,
+      "text": "This controlled demo uses fictional applicants. Every hiring decision stays with"
+    },
+    {
+      "from": 400,
+      "to": 425,
+      "text": "a person."
+    },
+    {
+      "from": 465,
+      "to": 600,
+      "text": "Start with the job criteria and a small, authorized evidence bundle."
+    },
+    {
+      "from": 600,
+      "to": 735,
+      "text": "The workflow prepares a guarded prompt for OpenClaw. It keeps the"
+    },
+    {
+      "from": 735,
+      "to": 833,
+      "text": "review tied to the evidence the owner supplied."
+    },
+    {
+      "from": 873,
+      "to": 995,
+      "text": "Here is a saved response from the working agent. Each finding"
+    },
+    {
+      "from": 995,
+      "to": 1073,
+      "text": "points back to a specific evidence ID."
+    },
+    {
+      "from": 1073,
+      "to": 1195,
+      "text": "Missing evidence stays unknown. The output is a review for a"
+    },
+    {
+      "from": 1195,
+      "to": 1262,
+      "text": "person, without candidate scores or rankings."
+    },
+    {
+      "from": 1302,
+      "to": 1439,
+      "text": "Now run the validator against that saved response. It checks the"
+    },
+    {
+      "from": 1439,
+      "to": 1501,
+      "text": "required structure and citation references."
+    },
+    {
+      "from": 1501,
+      "to": 1638,
+      "text": "A passing check does not prove a hiring judgment. It means"
+    },
+    {
+      "from": 1638,
+      "to": 1713,
+      "text": "the review passed these defined checks."
+    },
+    {
+      "from": 1753,
+      "to": 1919,
+      "text": "In a separate shared-session simulation, the owner and manager used distinct"
+    },
+    {
+      "from": 1919,
+      "to": 1934,
+      "text": "profiles."
+    },
+    {
+      "from": 1934,
+      "to": 2100,
+      "text": "The manager withdrew a Python debugging claim. The agent changed that"
+    },
+    {
+      "from": 2100,
+      "to": 2221,
+      "text": "finding to unverified and suggested evidence to request."
+    },
+    {
+      "from": 2221,
+      "to": 2341,
+      "text": "These were simulated participants, not real hiring activity."
+    },
+    {
+      "from": 2381,
+      "to": 2563,
+      "text": "Roletrace is listed on Agent Index, with a hosted setup link"
+    },
+    {
+      "from": 2563,
+      "to": 2629,
+      "text": "and local installation instructions."
+    },
+    {
+      "from": 2629,
+      "to": 2795,
+      "text": "Explore the MIT source. Hiring evidence. Clear sources. Human decisions."
+    }
+  ],
+  "audio_replacement": {
+    "input_mode": "per_scene_files",
+    "source_dir": "public/audio-elevenlabs",
+    "normalized_dir": "public/audio-elevenlabs-normalized",
+    "full_track_cuts_seconds": null,
+    "lead_seconds": 0.6,
+    "tail_seconds": 0.73,
+    "caption_alignment": "proportional_by_word_count_approximate",
+    "time_stretch": false
+  }
+}

@@ -12,3 +12,4 @@ runtime/
 .remember/
 plow-credentials
 .agent-index*
+.cache/

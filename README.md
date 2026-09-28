@@ -42,7 +42,7 @@ Historical experiments reported the refined guarded arm passing seven fixture ga
 
 ## Demo video
 
-The [93-second narrated demo](https://www.youtube.com/watch?v=pefBDsbXzvU) is published unlisted, with captions and the existing OpenAI-generated cover. It clearly labels fictional inputs and simulated collaboration. [Source, provenance, and publication status](docs/DEMO.md). YouTube signed-out playback and Agent Index attachment are verified. Narration uses ElevenLabs Brian - Relatable Everyman.
+The [94-second Roletrace demo](https://www.youtube.com/watch?v=-CKQ7tGdFxE) is published unlisted, with captions and the Roletrace OpenAI-generated cover. It clearly labels fictional inputs and simulated collaboration. [Source, provenance, and publication status](docs/DEMO.md). YouTube signed-out playback and Agent Index attachment are verified. Narration uses ElevenLabs Brian - Relatable Everyman.
 
 ## Hackathon finish line
 
@@ -50,7 +50,7 @@ The [public Agent Index listing](https://aiworthusing.com/agent-index/recruiter-
 
 The intended multiplayer flow is an authorized hiring owner and collaborator reviewing cited findings and recording their own decisions in a shared OpenClaw conversation. Applicant material is untrusted input. Candidate facing access requires separate isolation and consent; this repository does not expose an owner gateway publicly.
 
-The technical identifier `recruiter-associate` remains in existing install paths, skill names, registry coordinates, and public links while those migrations are assessed. Roletrace is the display name; this source update does not rename an existing installation or change its reporting identity.
+The technical identifier `recruiter-associate` remains in existing install paths, skill names, registry coordinates, and public links to preserve existing installs and links. Roletrace is the display name; new installs use Roletrace; existing hosted instances keep their prior version. The builder’s local installed display name and prompt headings were migrated with backups, without changing reporting identity.
 
 ## Data and license
 

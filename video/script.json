@@ -1,0 +1,45 @@
+[
+  {
+    "id": "Intro",
+    "phrases": [
+      "Hiring reviews are hard to audit when the evidence is scattered. Roletrace brings each finding back to its source.",
+      "This controlled demo uses fictional applicants. Every hiring decision stays with a person."
+    ]
+  },
+  {
+    "id": "Inputs",
+    "phrases": [
+      "Start with the job criteria and a small, authorized evidence bundle.",
+      "The workflow prepares a guarded prompt for OpenClaw. It keeps the review tied to the evidence the owner supplied."
+    ]
+  },
+  {
+    "id": "Findings",
+    "phrases": [
+      "Here is a saved response from the working agent. Each finding points back to a specific evidence ID.",
+      "Missing evidence stays unknown. The output is a review for a person, without candidate scores or rankings."
+    ]
+  },
+  {
+    "id": "Validation",
+    "phrases": [
+      "Now run the validator against that saved response. It checks the required structure and citation references.",
+      "A passing check does not prove a hiring judgment. It means the review passed these defined checks."
+    ]
+  },
+  {
+    "id": "Multiplayer",
+    "phrases": [
+      "In a separate shared-session simulation, the owner and manager used distinct profiles.",
+      "The manager withdrew a Python debugging claim. The agent changed that finding to unverified and suggested evidence to request.",
+      "These were simulated participants, not real hiring activity."
+    ]
+  },
+  {
+    "id": "Closing",
+    "phrases": [
+      "Roletrace is listed on Agent Index, with a hosted setup link and local installation instructions.",
+      "Explore the MIT source. Hiring evidence. Clear sources. Human decisions."
+    ]
+  }
+]

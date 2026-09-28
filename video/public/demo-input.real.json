@@ -1,0 +1,34 @@
+{
+  "attestation": {
+    "authority_to_process": true,
+    "authorized_sources": [
+      "work_sample"
+    ],
+    "contains_no_names_contacts_or_resumes": true,
+    "data_minimized": true,
+    "hiring_owner_id": "owner_01",
+    "operator_id": "operator_01"
+  },
+  "candidates": [
+    {
+      "evidence": [
+        {
+          "id": "evidence_01",
+          "source": "work_sample",
+          "text": "Explained the work sample tradeoffs"
+        }
+      ],
+      "id": "candidate_01"
+    }
+  ],
+  "mode": "real",
+  "role": {
+    "criteria": [
+      {
+        "id": "criterion_01",
+        "text": "Can explain a completed work sample"
+      }
+    ],
+    "id": "role_01"
+  }
+}

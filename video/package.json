@@ -1,0 +1,16 @@
+{
+  "name": "roletrace-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx --no-open",
+    "render": "remotion render src/index.tsx RoletraceDemo output/roletrace-demo.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --concurrency=4 --crf=18"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.529",
+    "@remotion/transitions": "4.0.529",
+    "remotion": "4.0.529",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  }
+}
