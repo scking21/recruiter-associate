@@ -2,13 +2,21 @@
 
 ![Recruiter Associate: Job evidence. Human decisions.](assets/recruiter-cover.png)
 
-An OpenClaw recruiter assistant that prepares cited, job related application reviews for a human hiring owner. The human retains hiring decisions and candidate communication.
+Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check. The human retains hiring decisions and candidate communication.
 
 This is the separate recruiter entry for the [AI Worth Using OpenClaw 2.0 hackathon](https://luma.com/zhkhsnpa). It preserves the refined recruiter experiment and supplies an isolated native OpenClaw installer and scoped Agent Index tooling. It is not yet a verified hackathon submission.
 
 ## Plow cloud hosting
 
-The [cloud variant](docs/CLOUD.md) uses the official Plow OpenClaw base for messaging and automatic usage reporting per installation. It uses the approved Plow GLM 5.2 route with no fallback and needs no NVIDIA key. One-click admission and a fresh hosted reply remain subject to organizer verification.
+The [cloud variant](docs/CLOUD.md) uses the official Plow OpenClaw base for messaging and automatic usage reporting per installation. It uses the approved Plow GLM 5.2 route with no fallback and needs no NVIDIA key. The Agent Index lists this agent as verified and one-click deployable. Real-user review and collaborator validation remain outstanding.
+
+## Start a first review
+
+Open [Text this agent on Agent Index](https://aiworthusing.com/agent-index/recruiter-associate) and ask: “Help me review one work-sample excerpt against one job criterion.” The agent asks for missing authorization and source information, assigns neutral reference IDs, and prepares a cited draft after validation. Share only minimized evidence from an authorized source; hiring decisions stay with the owner.
+
+![Fictional evidence-review example](assets/recruiter-review-demo.png)
+
+This screenshot shows a saved response to fictional input. It does not establish real applicant use. A [real-user pilot protocol](docs/PILOT.md) is prepared; participants are not yet available.
 
 ## Run locally
 
@@ -30,9 +38,13 @@ For a packaged install, see [Docker instructions](docs/CONTAINER.md). For the de
 
 Historical experiments reported the refined guarded arm passing seven fixture gates in two consecutive runs. Those provider runs were not repeated during repository extraction. See [experiment history](docs/EXPERIMENT-HISTORY.md). Pattern filtering and synthetic scores do not establish comprehensive privacy protection, fairness, legal compliance or real adoption.
 
+## Demo video
+
+The [93-second narrated demo](https://www.youtube.com/watch?v=pefBDsbXzvU) is published unlisted, with captions and the existing OpenAI-generated cover. It clearly labels fictional inputs and simulated collaboration. [Source, provenance, and publication status](docs/DEMO.md). YouTube signed-out playback and Agent Index attachment are verified. Narration uses ElevenLabs Brian - Relatable Everyman.
+
 ## Hackathon finish line
 
-The [public Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate) is registered. A [simulated multiplayer check](docs/MULTIPLAYER.md) verified separate profile attribution and a shared review correction. Still required: genuine user tasks and reported usage, an install proven by another operator, organizer verification, and a published video of at least 60 seconds. Synthetic applicants and test runs are excluded from reporting. See [the launch checklist](docs/HACKATHON.md).
+The [public Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate) is registered. A [simulated multiplayer check](docs/MULTIPLAYER.md) verified separate profile attribution and a shared review correction. Still required: genuine user tasks and reported usage, an install proven by another operator. Organizer verification and video publication are recorded in the current launch checklist. Synthetic applicants and test runs are excluded from reporting. See [the launch checklist](docs/HACKATHON.md).
 
 The intended multiplayer flow is an authorized hiring owner and collaborator reviewing cited findings and recording their own decisions in a shared OpenClaw conversation. Applicant material is untrusted input. Candidate facing access requires separate isolation and consent; this repository does not expose an owner gateway publicly.
 

@@ -2,6 +2,14 @@
 
 Real mode prepares and validates a minimized evidence review. It does not call a model, contact anyone, or make a hiring decision. Keep inputs and outputs outside tracked source.
 
+## Conversational intake
+
+Start with one owner-stated criterion and one short, authorized work-sample excerpt. The agent collects only missing authorization, minimization, and source assertions before accepting real evidence, then assigns neutral review-local IDs and builds the JSON. Users need not learn the schema. IDs are labels, not verified identities. The actual owner must authorize any shared room, collaborators, and review scope. Keep all hiring decisions human.
+
+Preserve supplied valid IDs and criterion wording. Ask about ambiguous attribution rather than guessing. Each correction creates a new review version with the changed evidence and affected finding identified; validate before presenting it. See the deployed skill for the intake sequence and the [pilot protocol](PILOT.md) for real-user evaluation.
+
+The JSON below is the internal workflow contract, not an onboarding form.
+
 ```json
 {
   "mode": "real",

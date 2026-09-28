@@ -22,10 +22,7 @@ from typing import Any, Iterator
 AGENT_ID = "recruiter-associate"
 ALLOWED_MODELS = frozenset({"z-ai/glm-5.3", "nvidia/z-ai/glm-5.3"})
 PUBLIC_NAME = "Recruiter associate"
-PUBLIC_BLURB = (
-    "Prepares cited job-related evidence reviews for a human hiring owner; "
-    "shared-session corrections tested with simulated participants. Human hiring decisions."
-)
+PUBLIC_BLURB = 'Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check.'
 PUBLIC_REPO = "https://github.com/scking21/recruiter-associate"
 PUBLIC_INSTALL_URL = f"{PUBLIC_REPO}/blob/main/docs/INSTALL.md"
 PUBLIC_RUNTIME = "Python 3.10+ standard library; OpenClaw 2.0"
