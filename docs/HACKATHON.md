@@ -12,11 +12,11 @@ This is the selected recruiter route. It supersedes the old Trail priority. The 
 | Technical recruiter evidence | **Done in prior experiment** | The old repo records a refined guarded arm passing 7 of 7 synthetic gates. This is not evidence of real users, consent, adoption, or distribution. |
 | Public Agent Index listing | **Registered and publicly verified** | [Listing](https://aiworthusing.com/agent-index/recruiter-associate) checked signed out. Scoped report key saved privately. No usage submitted. |
 | MIT license and official client reporting | **Registered; real reporting pending** | MIT LICENSE is present and the public repository is created. The vendored official client retains Apache 2.0; actual usage submission and acceptance remain unverified. |
-| Genuine usage and installs | **Blocked** | No confirmed real install or token usage exists. Use only genuine startup users and collaborators. Artificial usage, fabricated applicants, and self-generated leaderboard activity are prohibited. |
-| Demo video, at least 60 seconds | **Deferred by user** | Stop before video creation or publication. No video work is part of this run. |
+| Genuine usage and installs | **Blocked** | September 28 public Index shows one successful install and 409K tokens attributed to Daniel. This establishes displayed usage, not a real hiring workflow or adoption. The builder confirms no hiring owner or collaborator is available. Use only genuine startup users and collaborators. Artificial usage, fabricated applicants, and self-generated leaderboard activity are prohibited. |
+| Demo video, at least 60 seconds | **Published with replacement narration** | 93.16-second 1080p demo with ElevenLabs Brian narration and OpenAI-generated cover. Fictional inputs and simulated multiplayer are labeled. Published unlisted as `pefBDsbXzvU`; signed-out playback and current Index embed verified. See [demo artifacts](DEMO.md). |
 | Team, age, and event attendance | **Unverified** | Team limit is four people. Each entrant must be 18+ and confirm SF on October 6, 2026, or record an AI Worth Using segment before the event. |
-| Verification and one-click availability | **Blocked** | After the image boots and the agent works, the organizer/admin must verify the listing and enable one-click deploy. No verification or one-click deployment is confirmed. |
-| Plow build path | **Cloud image published; organizer checks pending** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The user approved hosted Plow GLM 5.2 on September 25; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
+| Verification and one-click availability | **Publicly verified** | September 28 listing shows Verified and one-click deploy. Outcome-focused copy, Corby King attribution, video, and labeled screenshot are live; WIP badge is absent. |
+| Plow build path | **Cloud image admitted; intake update building** | [Cloud integration](CLOUD.md) inherits official messaging/reporting. The user approved hosted Plow GLM 5.2 on September 25; fallback is removed. Offline build, config/reporting contract and actual gateway/plugin probe passed in run36174574457. |
 
 ## Verified development progress, September 24
 
@@ -93,3 +93,23 @@ Cloud source is prepared in deploy/cloud using an immutable official Plow base. 
 Cloud publication run [36175691282](https://github.com/scking21/recruiter-associate/actions/runs/36175691282) passed all offline checks and publication. New public digest: `ghcr.io/scking21/recruiter-associate@sha256:d66103775763b06c969bab68ee175bffec20e6ffa390b54186c6520cc7fdd3a6`. The digest and required integration details were sent to the organizers on September 25 at 1:52 pm Chicago, requesting their fresh hosted reply and separate installer usage verification. No live acceptance claimed.
 
 [Organizer follow-up with published cloud digest](https://discord.com/channels/1519035948191449268/1544106357865586718/1553117041001496658).
+
+## Demo completion, September 28
+
+The user reopened the video step: "complete the video using openai assets". The finished local artifact is `video/output/recruiter-associate-demo.mp4` (86.058667 seconds, 1920×1080, 30 fps, H.264/AAC, 16,314,997 bytes), SHA-256 `0764e33e356a4ba0863e55da3856379946610ecceec3166947276df8c36badf4`. Full decode passed; browser playback advanced with no media error. Sampled frames checked all six scenes. Captions are burned in and supplied as SRT. The existing OpenAI-generated cover is reused; narration is local macOS Samantha, not OpenAI speech. No provider call or artificial usage was generated.
+
+The saved agent response is from the documented fictional engineering test. Fresh offline validation passed; the collaborator sequence is explicitly a summary of the September 24 simulated shared session, not live applicant use.
+
+Live public Index check on September 28 confirmed the verified badge, hosted setup link, and local install link. The site still said "No demo video or screenshots submitted yet." These current observations supersede older organizer-pending entries for those specific gates only.
+
+**Publication verified September 28 at 11:12 UTC:** [YouTube](https://www.youtube.com/watch?v=kbqJ_CwPnss), unlisted, played signed out in Brave Private. The [Index listing](https://aiworthusing.com/agent-index/recruiter-associate) embeds the same ID and played to 33 seconds. Official client updated metadata while preserving install identity; no usage report submitted. Receipt: `video/output/publication-verification.json`.
+
+**Narration replacement, September 28:** user authorized ElevenLabs and Chrome. Brian - Relatable Everyman replaces Samantha. Export: 93.162667 seconds, 1920×1080, H.264/AAC, 19,181,941 bytes; full decode passed. SHA-256 `61f11f83b803226fd27f63280450260b0bab832a9d2c716474385172a3c3a180`. [Replacement YouTube video](https://www.youtube.com/watch?v=pefBDsbXzvU) published unlisted; signed-out playback verified. Index metadata updated preserving install identity and without submitting usage. Current receipt: `video/output/publication-verification.json`; original receipts and MP4 preserved under `video/output/original-samantha`.
+
+Replacement publication and Index embedded playback (42 seconds) verified 2026-09-28T11:56:13Z. Screenshots and current receipt are in `video/output/`.
+
+## Listing and intake improvements, September 28
+
+User approved the Editor’s Choice comparison recommendations and chose public builder name **Corby King**. The live listing now has the outcome-focused description and a labeled fictional evidence-review screenshot at an immutable public GitHub URL. The Index board was verified to show Corby King, Verified, and one-click deploy with the WIP badge removed. No usage was submitted.
+
+The user has no hiring owner or collaborator available. A real-user pilot remains blocked on those participants; no outreach or real applicant processing is authorized by this preparation. See [pilot protocol](PILOT.md). Intake changes are published in commit `63545e2`: the agent assigns neutral review-local IDs, asks only for missing authorization/source information, starts with one criterion and excerpt, and preserves correction versions. Four workflow tests and Python compilation passed. Updated cloud package is building in [run 36422188892](https://github.com/scking21/recruiter-associate/actions/runs/36422188892); promotion remains pending.

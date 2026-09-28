@@ -1,3 +1,22 @@
+# Completed demo, September 28
+
+The downloadable public version is the YouTube link below. Files under `video/output/` are local build and verification artifacts, not committed downloads.
+
+- Video: [`recruiter-associate-demo.mp4`](../video/output/recruiter-associate-demo.mp4), 93 seconds, 1080p/30fps, H.264 with AAC narration.
+- Captions: [`recruiter-associate-demo.srt`](../video/output/recruiter-associate-demo.srt); also burned into the video.
+- Editable source and provenance: [`video/README.md`](../video/README.md).
+- Publication copy: [`youtube-description.txt`](../video/youtube-description.txt).
+
+This is a controlled demonstration using a saved fictional agent response, fresh offline validation, and a clearly labeled simulated multiplayer summary. It reuses the existing OpenAI-generated cover with Codex-authored motion and ElevenLabs Brian narration. No fresh recruiter model run, real applicant processing, or reported usage was needed.
+
+Verified: full MP4 decode, 93.162667-second duration, 1920×1080 video, AAC audio, preserved six-scene visuals, revised closing attribution, and signed-out YouTube playback.
+
+Published [unlisted on YouTube](https://www.youtube.com/watch?v=pefBDsbXzvU) and [attached to Agent Index](https://aiworthusing.com/agent-index/recruiter-associate). Signed-out Brave Private playback and embedded playback verified September 28, 2026 at 11:56 UTC.
+
+**Narration replaced:** Brian - Relatable Everyman, Eleven Multilingual v2. Six clips downloaded through Chrome using 1,247 existing credits, with no purchase. Natural scene timing follows the audio. Original Samantha export is preserved under `video/output/original-samantha`.
+
+## Original recording plan (historical)
+
 # 75 second demo recording plan
 
 Record after the real owner and collaborator flow works. This script is preparation, not a finished video. Use permissioned, minimized evidence and conceal applicant identifiers, credentials, gateway pairing URLs and private account details. A synthetic walkthrough must say synthetic and cannot establish real use.
