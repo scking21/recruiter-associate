@@ -1,0 +1,26 @@
+{
+  "reviews": [
+    {
+      "candidate_id": "fictional_candidate",
+      "criterion_findings": [
+        {
+          "criterion_id": "accessibility_testing",
+          "status": "met",
+          "evidence_ids": [
+            "evidence_accessibility"
+          ]
+        },
+        {
+          "criterion_id": "rollback_planning",
+          "status": "met",
+          "evidence_ids": [
+            "evidence_rollback"
+          ]
+        }
+      ],
+      "summary": "The fictional work sample states that both criteria were demonstrated.",
+      "human_review": "Verify the cited fictional work sample before making any decision."
+    }
+  ],
+  "decision": "human_review_required"
+}

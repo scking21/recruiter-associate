@@ -12,12 +12,15 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
+      - name: Check review workflow and fictional adversarial cases offline
+        run: python3 -m unittest discover -s recruiter -t . -v
       - name: Build pinned Plow variant
         run: docker build -f deploy/cloud/Dockerfile -t recruiter-cloud:check .
       - name: Check config, reporting contract and workflow tool offline
         run: |
           docker run --rm --network none --entrypoint node recruiter-cloud:check /opt/recruiter/cloud-check.mjs
           docker run --rm --network none --entrypoint /usr/local/bin/recruiter-tool recruiter-cloud:check --help
+          docker run --rm --network none --workdir /opt/recruiter --entrypoint python3 recruiter-cloud:check -m unittest recruiter.test_presentation -v
       - name: Boot actual gateway and Plow plugin without network or reporting
         run: docker run --rm --network none -e AGENT_ID= recruiter-cloud:check /opt/plow/probe
       - name: Publish verified cloud image

@@ -32,9 +32,22 @@ IDs use lowercase letters, digits, underscores, or hyphens, start with a letter 
 umask 077
 ./recruiter-tool prepare --input inputs/input.real.json --output-dir work/review
 ./recruiter-tool validate --input work/review/input.real.json --response work/review/response.json --output work/review/validation.json
+./recruiter-tool render --input work/review/input.real.json --response work/review/response.json --output work/review/review.md
 ```
 
 Preparation writes `input.real.json` and `evidence-review.prompt.txt` with owner only permissions. In the installed OpenClaw workspace, the agent reads the prompt, drafts `response.json` in the current conversation without invoking a separate provider or network tool, and validates it before presenting findings. A valid response contains complete criterion findings, candidate owned citations, and `human_review_required`. It contains no scores, tiers, rankings, ordering, recommendations, outreach, or dispositions. The hiring owner retains every decision.
+
+## Readable output and corrections
+
+`render` validates the input and response before creating Markdown with the exact criteria, statuses, cited excerpts, summary, and human follow-up question. It does not call a model. Review text is rendered as text rather than executable HTML or Markdown supplied by evidence. Structural validation is not factual verification; a human still checks whether the cited evidence supports each finding.
+
+For a correction, prepare and validate a new version in a new directory, then compare it with the exact earlier files:
+
+```sh
+./recruiter-tool render --input work/review_02/input.real.json --response work/review_02/response.json --previous-input work/review/input.real.json --previous-response work/review/response.json --output work/review_02/review.md
+```
+
+Both previous-file arguments are required together. The comparison separates source changes from finding changes and rejects incompatible identities. Old files are retained; existing output with different content is not overwritten. Compare only reviews from the same authorized conversation. See the [fictional walkthrough](../examples/roletrace/README.md) and [bounded verification](VERIFICATION.md). These examples are manually authored offline artifacts, not recorded model responses or real hiring activity.
 
 Synthetic compatibility remains available:
 

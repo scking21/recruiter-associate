@@ -6,7 +6,15 @@ Hiring evidence. Clear sources. Human decisions.
 
 Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check. The human retains hiring decisions and candidate communication.
 
-This is the separate recruiter entry for the [AI Worth Using OpenClaw 2.0 hackathon](https://luma.com/zhkhsnpa). It preserves the refined recruiter experiment and supplies an isolated native OpenClaw installer and scoped Agent Index tooling. It is not yet a verified hackathon submission.
+When a teammate corrects the evidence, see which finding changed and which stayed the same, with the original excerpts and previous review preserved.
+
+## See a correction, end to end
+
+In the [fictional walkthrough](examples/roletrace/README.md), an excerpt initially says the candidate authored accessibility tests. A clarification says they reviewed a teammate's test output. The authorship finding changes from `met` to `unknown`; the separate rollback finding stays unchanged. The readable report pairs each finding with its exact source excerpt and shows the correction comparison.
+
+These are manually authored offline fixtures, not a live model demonstration or applicant review. [Verification and limits](docs/VERIFICATION.md) explain what the checks establish. The published video below separately shows the earlier saved agent response and labeled simulated collaboration.
+
+This is the separate recruiter entry for the [AI Worth Using OpenClaw 2.0 hackathon](https://luma.com/zhkhsnpa). The public Agent Index listing is verified and the demo is attached. Genuine hiring use, real collaborator validation, and entrant eligibility remain separate outstanding gates. The repository includes an isolated native OpenClaw installer and scoped Agent Index tooling.
 
 ## Plow cloud hosting
 
@@ -15,6 +23,8 @@ The [cloud variant](docs/CLOUD.md) uses the official Plow OpenClaw base for mess
 ## Start a first review
 
 Open [Text this agent on Agent Index](https://aiworthusing.com/agent-index/recruiter-associate) and ask: “Help me review one work-sample excerpt against one job criterion.” The agent asks for missing authorization and source information, assigns neutral reference IDs, and prepares a cited draft after validation. Share only minimized evidence from an authorized source; hiring decisions stay with the owner.
+
+Bring one criterion you actually need to assess and one short work-sample excerpt you are authorized to use. Expect a draft showing the supporting evidence, what remains unknown, and a question to resolve the gap. In an owner-authorized shared conversation, a collaborator can correct an excerpt and ask which finding changed. Roletrace should preserve the earlier version and explain the change. The [first-use pilot](docs/PILOT.md) measures whether this saves human effort.
 
 ![Fictional evidence-review example](assets/roletrace-review-demo.png)
 

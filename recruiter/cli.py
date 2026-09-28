@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Sequence
 
+from .presentation import render_markdown
 from .workflow import build_guarded_prompt, bundle_mode, load_json, parse_response, validate_response, write_or_validate
 
 
@@ -31,6 +32,27 @@ def validate(input_path: Path, response_path: Path, output_path: Path | None) ->
     return 0 if report["valid"] else 2
 
 
+def render(
+    input_path: Path,
+    response_path: Path,
+    output_path: Path,
+    previous_input_path: Path | None = None,
+    previous_response_path: Path | None = None,
+) -> int:
+    bundle = load_json(input_path)
+    response = parse_response(response_path.read_text(encoding="utf-8"))
+    previous_bundle = load_json(previous_input_path) if previous_input_path is not None else None
+    previous_response = (
+        parse_response(previous_response_path.read_text(encoding="utf-8"))
+        if previous_response_path is not None
+        else None
+    )
+    text = render_markdown(bundle, response, previous_bundle, previous_response)
+    write_or_validate(output_path, text)
+    print(output_path)
+    return 0
+
+
 def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(description="Prepare and validate bounded recruiter evidence reviews offline.")
     commands = root.add_subparsers(dest="command", required=True)
@@ -41,6 +63,12 @@ def parser() -> argparse.ArgumentParser:
     validate_parser.add_argument("--input", type=Path, required=True)
     validate_parser.add_argument("--response", type=Path, required=True)
     validate_parser.add_argument("--output", type=Path)
+    render_parser = commands.add_parser("render", help="write an immutable Markdown review for a validated real response")
+    render_parser.add_argument("--input", type=Path, required=True)
+    render_parser.add_argument("--response", type=Path, required=True)
+    render_parser.add_argument("--output", type=Path, required=True)
+    render_parser.add_argument("--previous-input", type=Path)
+    render_parser.add_argument("--previous-response", type=Path)
     return root
 
 
@@ -49,7 +77,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         if args.command == "prepare":
             return prepare(args.input, args.output_dir)
-        return validate(args.input, args.response, args.output)
+        if args.command == "validate":
+            return validate(args.input, args.response, args.output)
+        return render(args.input, args.response, args.output, args.previous_input, args.previous_response)
     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as error:
         print(f"error: {error}")
         return 2

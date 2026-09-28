@@ -16,7 +16,7 @@ COPY deploy/cloud/check.mjs /opt/recruiter/cloud-check.mjs
 RUN chmod 0755 /usr/local/bin/recruiter-tool
 ENV AGENT_ID=recruiter-associate AGENT_RUNTIME=OpenClaw \
     AGENT_NAME="Roletrace" \
-    AGENT_BLURB="Turn job criteria and anonymized work-sample evidence into a cited review: what is supported, what is missing, and what the hiring owner needs to check."
+    AGENT_BLURB="Turn hiring evidence into a cited review. See what changes when a teammate corrects a source, keep the previous version, and leave hiring decisions with the owner."
 # Approved September 25 for this hosted variant only; config removes fallbacks.
 ENV RECRUITER_CLOUD_MODEL=z-ai/glm-5.2
 USER node

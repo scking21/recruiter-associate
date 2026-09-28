@@ -1,0 +1,26 @@
+{
+  "reviews": [
+    {
+      "candidate_id": "fictional_candidate",
+      "criterion_findings": [
+        {
+          "criterion_id": "accessibility_testing",
+          "status": "unknown",
+          "evidence_ids": [
+            "evidence_accessibility"
+          ]
+        },
+        {
+          "criterion_id": "rollback_planning",
+          "status": "met",
+          "evidence_ids": [
+            "evidence_rollback"
+          ]
+        }
+      ],
+      "summary": "The clarification leaves authorship of the accessibility tests unknown, while the rollback evidence is unchanged.",
+      "human_review": "Verify authorship from an authorized source before treating the accessibility criterion as established."
+    }
+  ],
+  "decision": "human_review_required"
+}

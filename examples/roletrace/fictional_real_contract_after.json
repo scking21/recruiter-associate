@@ -1,0 +1,43 @@
+{
+  "mode": "real",
+  "attestation": {
+    "hiring_owner_id": "fictional_owner",
+    "operator_id": "fictional_operator",
+    "authority_to_process": true,
+    "data_minimized": true,
+    "contains_no_names_contacts_or_resumes": true,
+    "authorized_sources": [
+      "fictional_work_sample"
+    ]
+  },
+  "role": {
+    "id": "fictional_role",
+    "criteria": [
+      {
+        "id": "accessibility_testing",
+        "text": "Authored automated accessibility tests for a web interface"
+      },
+      {
+        "id": "rollback_planning",
+        "text": "Explained a rollback plan for a production change"
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "id": "fictional_candidate",
+      "evidence": [
+        {
+          "id": "evidence_accessibility",
+          "text": "Clarification: the candidate reviewed a teammate's accessibility test output; this sample did not establish who authored the tests.",
+          "source": "fictional_work_sample"
+        },
+        {
+          "id": "evidence_rollback",
+          "text": "The candidate described reverting the release artifact and restoring the prior configuration if monitoring showed errors.",
+          "source": "fictional_work_sample"
+        }
+      ]
+    }
+  ]
+}

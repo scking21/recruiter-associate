@@ -26,7 +26,7 @@ Eight focused workflow and preserved experiment tests passed. Real mode was chec
 
 The official Luma listing gives these deadlines:
 
-* Submission: **September 28, 2026 at 11:59 pm PT**, which is **September 29, 2026 at 1:59 am CDT (Chicago)**.
+* Submission (extension verified September 28): **September 29, 2026 at 11:59 pm PT**, which is **September 30, 2026 at 1:59 am CDT (Chicago)**.
 * Leaderboard snapshot: **September 30, 2026 at 11:59 pm PT**, which is **October 1, 2026 at 1:59 am CDT (Chicago)**.
 * Winner announcement: October 1, 2026.
 * AgentCribs event and live demo: October 6, 2026.
@@ -39,8 +39,8 @@ The local CLI now supports explicitly attested, minimized real evidence bundles 
 2. Verify a genuine external installation and useful shared task; keep engineering simulation excluded from reporting.
 3. Hosted route approved: Plow GLM 5.2 with no fallback. Native installs remain NVIDIA GLM 5.3.
 4. Keep the published MIT repository installable. Use the official bring your own agent path with the scoped client; a public container and admin verification are separate distribution work.
-5. Registration is complete. After the first genuine task, verify its accepted usage report and enable the reporting schedule. Ask the organizer/admin for verification and one-click deployment.
-6. Record a 60-second-or-longer demo of the real workflow, confirm entrant eligibility and team size, and submit before the Chicago equivalent of the PT deadline.
+5. Registration, verification and one-click deployment are complete. After the first genuine task, verify its correctly attributed accepted report. The hosted image inherits automatic reporting; keep native test traffic excluded and do not enable a native schedule for rehearsals.
+6. The published 94-second demo and Index attachment are verified. Preserve them. If a real pilot succeeds, prepare a participant-approved outcome summary; a replacement video is optional. Confirm entrant eligibility and team size before the extended deadline.
 
 ## Sources
 
@@ -60,7 +60,7 @@ Use Codex Sol for scoped implementation and Luna for bounded research, with at m
 
 Current official OpenAI documentation lists GPT-6 Astra, Sol and Luna, GPT Image 2.5 Flare and Sunburst, and GPT-Live 1. Flare targets speed; Sunburst targets image quality. These are available product names, not proof of this account's API access. No additional voice or agent platform integration is needed to finish this entry. Sources: [model catalog](https://developers.openai.com/api/docs/models/all), [image guidance](https://developers.openai.com/api/docs/guides/image-prompting).
 
-[DevDay is September 29](https://openai.com/index/devday-2026/), after the September 28 submission deadline. Submit with current products. Evaluate later announcements only if they solve a measured problem without risking the entry; no unannounced capability is a dependency.
+[DevDay is September 29](https://openai.com/index/devday-2026/), now the same day as the extended submission deadline. Submit with the working stack. Evaluate announcements only if they solve a measured problem without risking the entry; no unannounced capability is a dependency.
 
 Essential verification only: fresh install and restart, useful owner task, genuine collaborator interaction with access boundaries, one accepted correctly attributed usage report, and signed out listing/video access. A green unit test or generated cover satisfies none of those live gates.
 
@@ -127,3 +127,13 @@ Source commit `f85cd72` passed four workflow tests. The local installed config a
 Compatibility exceptions: repository/Index slug, package coordinate, CLI/environment/skill IDs and filesystem checkout names remain `recruiter-associate` or recruiter-based so existing links, reporting and installs continue working. Existing third-party hosted instances keep their prior images. The internal Plow catalog label remains Recruiter associate; its owner CLI updates the public Index name but exposes no catalog-name migration. Historical videos, original assets and verification records retain their original names. No listing was recreated and no identity, traffic or real-user outcome was invented.
 
 [Scoped gstack review](designs/roletrace-review.md) covered CEO, design, DX, engineering and code-review methods. Findings on display labels, current native state and media consistency were addressed; package migration risk is avoided through compatibility IDs. This is not a full autoplan certification: the outside Claude review could not run because Claude was unauthenticated. The real-user pilot is still prepared, not run, because the user has no hiring owner or collaborator.
+
+## Evidence review improvements, September 28
+
+The user directed work toward controllable product and submission improvements and explicitly authorized delegation with independent verification. Roletrace now has an offline `render` command that validates a response before presenting exact criteria, cited source excerpts and human follow-up questions. Corrections compare the prior and current saved reviews, preserve old artifacts, separate changed evidence from changed findings, and flag new or changed evidence for rechecking. It does not infer whether a finding is true.
+
+Native and cloud skill instructions use the renderer, group missing intake questions and keep resolved assertions. The repository opens with a [readable correction walkthrough](../examples/roletrace/README.md), explicitly labeled as manually authored fictional fixtures. Eight new adversarial checks and fourteen presentation tests supplement the existing eight tests; the primary independently ran all 30 successfully. [Verification scope](VERIFICATION.md).
+
+Two native delegated assignments were integrated and independently reviewed using the gstack critical/informational checklist. Review found and fixed same-ID text changes, filtered comparison excerpts, and misleading unchanged-finding labels when contradictory evidence was added. Final native reviewer found no remaining fixable defect in its scope; primary separately checked source, fixture bytes, CLI output and the full suite. Claude outside review remains unavailable because it is signed out; no full cross-model gstack certification is claimed.
+
+Release status: source and offline checks complete; cloud publication and new-install promotion pending verification. The existing video and its verified publication remain intact. No model benchmark, outreach or artificial usage was generated. Genuine adoption is a separate limitation, not a prerequisite to these improvements.
