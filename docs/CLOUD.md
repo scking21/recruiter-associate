@@ -10,7 +10,7 @@ Recovery release verified September 28 at 18:55 UTC: [run36468209995](https://gi
 
 This variant addresses the organizer's [September 24 reply](https://discord.com/channels/1519035948191449268/1544106357865586718/1552884751155863612): Plow messaging, automatic per-install reporting, and host-supported credentials.
 
-It inherits the official [Plow OpenClaw base](https://github.com/plow-pbc/plow-openclaw-agent/tree/7ce757a1745de286dd180c5c5182aca31eba8a75), pinned to published digest `sha256:6e5e1a11a8c6e2ef6ecaa5e7b429e778a9a3befaf416a09922aaaa4a5b21d647`. The runtime is OpenClaw 2026.9.4. Do not attach the native 2026.9.5 state volume: that would be an unsupported database downgrade.
+It inherits the official [Plow OpenClaw base](https://github.com/plow-pbc/plow-openclaw-agent/tree/771198a9609dcef54d44843e7da5329c17fa51b4), pinned to published digest `sha256:f1e7c421b97a80f1bd17015f96daceb965f350a241f7edc7e4d856a0e3a6f8f5`. The runtime is OpenClaw 2026.9.6. Do not attach the native 2026.9.5 state volume: that would be an unsupported database downgrade.
 
 The inherited channel handles Plow owner chats and group conversations. The recruiter prompt permits a shared evidence review only after the actual owner authorizes that trusted room, its collaborators, and its scope. Shared files and tools are not privacy isolation. Hiring decisions remain human; sending to other conversations is disabled in the variant config.
 
