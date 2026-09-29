@@ -1,4 +1,8 @@
-# Roletrace demo, September 28
+# Roletrace demo
+
+**Current, September 29:** [trace recut](https://www.youtube.com/watch?v=ZztJ2jnq6JU) is attached to the [Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate). Same narration and 93.952-second timing; new evidence-graph visuals and a labeled replay of saved September 24 simulation excerpts. Signed-out playback and Index embed verified. Receipt: `video/output/roletrace-trace-verification.json`; source: `video/src/trace/`. The September 28 video below is superseded but still online.
+
+## September 28 version (superseded)
 
 [Watch the published Roletrace demo](https://www.youtube.com/watch?v=-CKQ7tGdFxE) or open the [Agent Index listing](https://aiworthusing.com/agent-index/recruiter-associate). It is unlisted, with signed-out Brave Private playback and Index embedded playback verified September 28, 2026 at 13:00 UTC.
 

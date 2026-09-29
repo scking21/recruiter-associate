@@ -1,12 +1,12 @@
-TITLE: Roletrace | Cited evidence, human hiring decisions | OpenClaw demo
+TITLE: Roletrace | Every hiring finding, traced to its source | OpenClaw demo
 
 Roletrace prepares cited, job-related evidence reviews for a human hiring owner.
 
-This 94-second controlled demonstration shows a fictional minimized evidence bundle, a saved agent response, fresh offline validation, and a summary of a verified shared-session simulation. It is not real applicant processing or a recording of real collaborators. Human hiring decisions and candidate communication stay with people.
+This 94-second controlled demonstration shows a fictional minimized evidence bundle, the real-mode guarded prompt, a saved agent response, fresh offline validation, and a replay of excerpts from a saved shared-session simulation in which a simulated manager withdraws a claim and the agent marks the finding unverified. No real applicants or real collaborators appear. Human hiring decisions and candidate communication stay with people.
 
 Agent Index: https://aiworthusing.com/agent-index/recruiter-associate
 MIT source and installation: https://github.com/scking21/roletrace
 
-The video uses an OpenAI-generated cover, Codex-authored motion and captions, and ElevenLabs Brian synthetic narration. The demonstrated saved recruiter response came from the project's authorized GLM runtime; OpenAI visual assets do not imply OpenAI powers the recruiter.
+Motion graphics and captions were built in Remotion; narration is ElevenLabs Brian (synthetic). The saved recruiter responses came from the project's NVIDIA GLM 5.3 runtime.
 
 The validation checks structure and bounded rules, not factual truth, fairness, legal compliance, or hiring fitness.

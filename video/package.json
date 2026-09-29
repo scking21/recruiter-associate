@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "studio": "remotion studio src/index.tsx --no-open",
-    "render": "remotion render src/index.tsx RoletraceDemo output/roletrace-demo.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --concurrency=4 --crf=18"
+    "render": "remotion render src/index.tsx RoletraceDemo output/roletrace-demo.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --concurrency=4 --crf=18",
+    "render:trace": "remotion render src/index.tsx RoletraceTrace output/roletrace-trace-demo.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --concurrency=4 --crf=18"
   },
   "dependencies": {
     "@remotion/cli": "4.0.529",
