@@ -35,3 +35,15 @@ locally. The two actual recruiter responses used the configured GLM runtime.
 
 Sources: [multi user mode](https://docs.openclaw.ai/concepts/multi-user),
 [trusted proxy authentication](https://docs.openclaw.ai/gateway/trusted-proxy-auth).
+
+## Re-run on the current build, September 29
+
+Repeated on `main` at `1da0c02` with OpenClaw 2026.9.6 and NVIDIA `z-ai/glm-5.3`, in a fresh isolated state (`runtime/multiplayer-20260929`, `DO-NOT-REPORT`, loopback port 22790, same trusted-proxy identities and prompts). Results:
+
+- Owner turn completed (about 4 minutes) with a cited v1 review: A Python debugging supported by A1, B Python debugging unknown.
+- Manager correction completed (about 6 minutes). The agent acknowledged the A1 withdrawal, preserved v1, produced v2 changing A Python debugging to unknown, left B unchanged, and listed evidence to request.
+- `sessions.list` showed the session `shared`, owner profile `sim-owner` and a distinct participant profile `sim-manager`.
+- An unapproved identity was refused (`NOT_PAIRED`).
+
+The first owner attempt timed out at the 180-second turn limit after two slow provider responses; the passing run used a 600-second limit in this test configuration only. No usage was reported. Evidence is retained privately under `private/multiplayer-20260929/`.
+
