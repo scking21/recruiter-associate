@@ -170,7 +170,7 @@ def _publish(client: Any, state_dir: Path, days: list[dict[str, Any]]) -> None:
         raise ReportingError(f"Agent Index report was not accepted (status {code})")
 
 
-def _register(client: Any, state_dir: Path, video_id: str | None) -> None:
+def _register(client: Any, state_dir: Path, video_id: str | None, image_url: str | None = None) -> None:
     """Register fixed public metadata through the official client."""
     argv = [
         "--register",
@@ -189,6 +189,8 @@ def _register(client: Any, state_dir: Path, video_id: str | None) -> None:
     ]
     if video_id is not None:
         argv.extend(["--video", video_id])
+    if image_url is not None:
+        argv.extend(["--image", image_url])
     with _scoped_report_state(client, state_dir):
         client.use_index()
         try:
@@ -204,6 +206,15 @@ def _validate_video_id(value: str | None) -> str | None:
         return None
     if not re.fullmatch(r"[A-Za-z0-9_-]{6,64}", value):
         raise ReportingError("--video-id must be a YouTube video ID, not a URL")
+    return value
+
+
+def _validate_image_url(value: str | None) -> str | None:
+    if value is None:
+        return None
+    # A listing image must not change after review, so require a commit-pinned raw URL.
+    if not re.fullmatch(r"https://raw\.githubusercontent\.com/scking21/roletrace/[0-9a-f]{7,40}/assets/[A-Za-z0-9._-]+\.png", value):
+        raise ReportingError("--image-url must be a commit-pinned raw.githubusercontent.com URL under scking21/roletrace/assets")
     return value
 
 
@@ -231,6 +242,10 @@ def _parser() -> argparse.ArgumentParser:
         "--video-id",
         help="optional YouTube video ID for --register, never a URL",
     )
+    parser.add_argument(
+        "--image-url",
+        help="optional commit-pinned repository image URL for --register; replaces the listing images",
+    )
     return parser
 
 
@@ -242,21 +257,22 @@ def main(argv: list[str] | None = None) -> int:
     if args.register and not os.environ.get("PLOW_AGENT_TOKEN"):
         print("recruiter report refused: --register requires PLOW_AGENT_TOKEN", file=sys.stderr)
         return 2
-    if args.video_id is not None and not args.register:
-        print("recruiter report refused: --video-id requires --register", file=sys.stderr)
+    if (args.video_id is not None or args.image_url is not None) and not args.register:
+        print("recruiter report refused: --video-id and --image-url require --register", file=sys.stderr)
         return 2
     if args.days <= 0 or args.days > 366:
         print("recruiter report refused: --days must be between 1 and 366", file=sys.stderr)
         return 2
     try:
         video_id = _validate_video_id(args.video_id)
+        image_url = _validate_image_url(args.image_url)
         if args.register:
             state_dir = _validate_registration_dir(args.state_dir)
         else:
             state_dir, _store = _validate_state_dir(args.state_dir)
         loaded = _load_client()
         if args.register:
-            _register(loaded, state_dir, video_id)
+            _register(loaded, state_dir, video_id, image_url)
             print(json.dumps({"agent": AGENT_ID, "registered": True}, sort_keys=True))
             return 0
         days = _collect(loaded, state_dir, args.days)

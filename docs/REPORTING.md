@@ -66,7 +66,7 @@ python3 scripts/recruiter_report.py \
   --video-id YOUTUBE_VIDEO_ID
 ```
 
-`--video-id` is optional and must be an ID, never a URL. The fixed page points
+`--video-id` is optional and must be an ID, never a URL. `--image-url` is optional, replaces the listing images, and must be a commit-pinned `raw.githubusercontent.com/scking21/roletrace/<sha>/assets/*.png` URL. The fixed page points
 to the public repository and [`docs/INSTALL.md`](INSTALL.md). That install
 document describes the local owner operated runtime and does not claim a
 multiplayer transport. The helper scopes the client's state function, token
