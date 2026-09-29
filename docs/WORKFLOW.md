@@ -35,7 +35,7 @@ umask 077
 ./recruiter-tool render --input work/review/input.real.json --response work/review/response.json --output work/review/review.md
 ```
 
-Preparation writes `input.real.json` and `evidence-review.prompt.txt` with owner only permissions. In the installed OpenClaw workspace, the agent reads the prompt, drafts `response.json` in the current conversation without invoking a separate provider or network tool, and validates it before presenting findings. A valid response contains complete criterion findings, candidate owned citations, and `human_review_required`. It contains no scores, tiers, rankings, ordering, recommendations, outreach, or dispositions. The hiring owner retains every decision.
+Preparation writes `input.real.json` and `evidence-review.prompt.txt` with owner only permissions. In the installed OpenClaw workspace, the agent reads the prompt, drafts `response.json` in the current conversation without invoking a separate provider or network tool, and validates it before presenting findings. A valid response contains complete criterion findings, candidate owned citations, and `human_review_required`. Its structured fields contain no scores, tiers, rankings, ordering, recommendations, outreach, or dispositions. Legacy free-text fields are untrusted and are never included in the rendered review. The hiring owner retains every decision.
 
 ## Readable output and corrections
 
@@ -54,3 +54,5 @@ Synthetic compatibility remains available:
 ```sh
 python3 -m recruiter prepare --input experiments/recruiter/fixture.json --output-dir runtime/recruiter-demo
 ```
+
+Real-mode responses should omit `summary` and `human_review`. The renderer supplies fixed neutral summary and human-check text. Legacy responses remain readable, but their narrative fields are excluded from both the current review and correction comparison. Never present raw model narrative or response JSON as the validated review; present only the renderer output. This closes the narrative recommendation channel, not arbitrary instructions in quoted source evidence or criteria.

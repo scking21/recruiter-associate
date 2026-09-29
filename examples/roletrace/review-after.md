@@ -30,23 +30,11 @@ Recheck these findings against new, removed, changed, or filtered evidence:
 
 ### `fictional_candidate` / Summary
 
-**Previous:**
-
-> The fictional work sample states that both criteria were demonstrated\.
-
-**Current:**
-
-> The clarification leaves authorship of the accessibility tests unknown, while the rollback evidence is unchanged\.
+Untrusted draft text changed; it is excluded from this evidence review.
 
 ### `fictional_candidate` / Human question
 
-**Previous:**
-
-> Verify the cited fictional work sample before making any decision\.
-
-**Current:**
-
-> Verify authorship from an authorized source before treating the accessibility criterion as established\.
+Untrusted draft text changed; it is excluded from this evidence review.
 
 # Roletrace evidence review
 
@@ -82,8 +70,8 @@ Validation note: structural validation does not verify that a finding is factual
 
 ### Summary
 
-> The clarification leaves authorship of the accessibility tests unknown, while the rollback evidence is unchanged\.
+Findings above describe criterion evidence only; no overall candidate recommendation is produced.
 
 ### Human question
 
-> Verify authorship from an authorized source before treating the accessibility criterion as established\.
+Does each cited excerpt support its finding, and what authorized evidence would resolve any unknowns?

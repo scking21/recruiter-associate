@@ -102,9 +102,9 @@ def _render_review(bundle: dict[str, Any], response: dict[str, Any]) -> list[str
                 lines.extend(["", f"- Evidence `{evidence_id}` from source `{item['source']}`", ""])
                 lines.extend(_quote(item["text"]))
         lines.extend(["", "### Summary", ""])
-        lines.extend(_quote(review["summary"]))
+        lines.append("Findings above describe criterion evidence only; no overall candidate recommendation is produced.")
         lines.extend(["", "### Human question", ""])
-        lines.extend(_quote(review["human_review"]))
+        lines.append("Does each cited excerpt support its finding, and what authorized evidence would resolve any unknowns?")
     return lines
 
 
@@ -126,7 +126,7 @@ def _render_comparison(
     added_evidence: list[tuple[str, str, str]] = []
     removed_evidence: list[tuple[str, str, str]] = []
     withheld_changes: list[str] = []
-    narrative_changes: list[tuple[str, str, str, str]] = []
+    narrative_changes: list[tuple[str, str]] = []
 
     for candidate in bundle["candidates"]:
         candidate_id = candidate["id"]
@@ -188,8 +188,8 @@ def _render_comparison(
 
         current_review, old_review = current_reviews[candidate_id], previous_reviews[candidate_id]
         for field, label in (("summary", "Summary"), ("human_review", "Human question")):
-            if current_review[field] != old_review[field]:
-                narrative_changes.append((candidate_id, label, old_review[field], current_review[field]))
+            if current_review.get(field) != old_review.get(field):
+                narrative_changes.append((candidate_id, label))
     has_changes = any(
         (
             source_changes,
@@ -259,11 +259,8 @@ def _render_comparison(
         lines.extend(["", "## Unchanged findings and cited evidence", "", *[f"- {item}" for item in unaffected_findings]])
     if narrative_changes:
         lines.extend(["", "## Summary and human question changes"])
-        for candidate_id, label, old_text, current_text in narrative_changes:
-            lines.extend(["", f"### `{candidate_id}` / {label}", "", "**Previous:**", ""])
-            lines.extend(_quote(old_text))
-            lines.extend(["", "**Current:**", ""])
-            lines.extend(_quote(current_text))
+        for candidate_id, label in narrative_changes:
+            lines.extend(["", f"### `{candidate_id}` / {label}", "", "Untrusted draft text changed; it is excluded from this evidence review."])
     return lines
 
 

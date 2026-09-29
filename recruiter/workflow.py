@@ -157,13 +157,11 @@ def output_contract(mode: str = "synthetic") -> str:
 {
   "reviews": [{
     "candidate_id": "candidate_01",
-    "criterion_findings": [{"criterion_id": "criterion_01", "status": "met|not_met|unknown", "evidence_ids": ["evidence_01"]}],
-    "summary": "short evidence based summary",
-    "human_review": "one question or next check for the hiring owner"
+    "criterion_findings": [{"criterion_id": "criterion_01", "status": "met|not_met|unknown", "evidence_ids": ["evidence_01"]}]
   }],
   "decision": "human_review_required"
 }
-Include every candidate and criterion exactly once. Do not score, tier, rank, order, recommend, or disposition candidates."""
+Include every candidate and criterion exactly once. Omit summary and human_review: the renderer supplies fixed neutral text. Do not score, tier, rank, order, recommend, or disposition candidates."""
     return """Return JSON only with this shape:
 {
   "recommendations": [{
@@ -247,7 +245,7 @@ def _validate_reviews(bundle: dict[str, Any], response: dict[str, Any], mode: st
             unexpected = sorted(set(review) - {"candidate_id", "criterion_findings", "summary", "human_review"})
             if unexpected:
                 errors.append(f"real review contains unsupported fields for {candidate_id}: {', '.join(unexpected)}")
-            if not isinstance(review.get("summary"), str) or not isinstance(review.get("human_review"), str):
+            if any(field in review and not isinstance(review[field], str) for field in ("summary", "human_review")):
                 errors.append(f"summary and human_review must be strings for {candidate_id}")
         if mode == "synthetic" and (not isinstance(review.get("tier"), str) or review.get("tier") not in VALID_TIERS):
             errors.append(f"invalid tier for {candidate_id}")
@@ -322,6 +320,7 @@ def validate_response(bundle: dict[str, Any], response: dict[str, Any]) -> dict[
         "limitations": [
             "Configured pattern checks are bounded and are not comprehensive protected or identifying information detection.",
             "Validation checks structure and bounded safety invariants, not factual truth, consent, fairness, legal compliance, or hiring fitness.",
+            "Legacy summary and human_review fields are untrusted draft text: validation does not approve their content, and the real-mode renderer excludes them.",
             "A human remains responsible for every hiring, rejection, outreach, and disposition decision.",
         ],
     }

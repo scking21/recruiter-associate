@@ -34,8 +34,8 @@ Validation note: structural validation does not verify that a finding is factual
 
 ### Summary
 
-> The fictional work sample states that both criteria were demonstrated\.
+Findings above describe criterion evidence only; no overall candidate recommendation is produced.
 
 ### Human question
 
-> Verify the cited fictional work sample before making any decision\.
+Does each cited excerpt support its finding, and what authorized evidence would resolve any unknowns?

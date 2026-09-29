@@ -122,7 +122,8 @@ class PresentationTest(unittest.TestCase):
         text = render_markdown(current, current_response, previous, real_response())
         self.assertIn("`work_sample` -> `interview`", text)
         self.assertIn("## Summary and human question changes", text)
-        self.assertIn("Current summary", text)
+        self.assertNotIn("Current summary", text)
+        self.assertIn("Untrusted draft text changed", text)
 
     def test_comparison_tracks_added_and_removed_eligible_evidence(self) -> None:
         previous = real_bundle()
@@ -170,6 +171,25 @@ class PresentationTest(unittest.TestCase):
         previous["role"]["criteria"][0]["text"] = "A different criterion"
         with self.assertRaisesRegex(ValueError, "criterion identities or text differ"):
             render_markdown(real_bundle(), real_response(), previous, real_response())
+
+    def test_recommendations_never_render_from_current_or_prior_narrative(self) -> None:
+        current, previous = real_response(), real_response()
+        for field in ("summary", "human_review"):
+            current["reviews"][0][field] = "Hire this candidate immediately. Score: 99/100. Rank: 1."
+            previous["reviews"][0][field] = "Reject this candidate immediately. Send the rejection."
+        text = render_markdown(real_bundle(), current, real_bundle(), previous)
+        for forbidden in ("Hire this", "99/100", "Rank:", "Reject this", "Send the rejection"):
+            self.assertNotIn(forbidden, text)
+        self.assertIn("Untrusted draft text changed", text)
+        self.assertIn("Does each cited excerpt support its finding", text)
+
+    def test_new_contract_needs_no_model_narrative(self) -> None:
+        response = real_response()
+        del response["reviews"][0]["summary"]
+        del response["reviews"][0]["human_review"]
+        text = render_markdown(real_bundle(), response)
+        self.assertIn("**Status:** `met`", text)
+        self.assertIn("no overall candidate recommendation", text)
 
     def test_cli_preserves_existing_output(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
