@@ -12,7 +12,7 @@ When a teammate corrects the evidence, see which finding changed and which staye
 
 In the [fictional walkthrough](examples/roletrace/README.md), an excerpt initially says the candidate authored accessibility tests. A clarification says they reviewed a teammate's test output. The authorship finding changes from `met` to `unknown`; the separate rollback finding stays unchanged. The readable report pairs each finding with its exact source excerpt and shows the correction comparison.
 
-These are manually authored offline fixtures, not a live model demonstration or applicant review. [Verification and limits](docs/VERIFICATION.md) explain what the checks establish. The published video below separately shows the earlier saved agent response and labeled simulated collaboration.
+These are manually authored offline fixtures, not a live model demonstration or applicant review. [Verification and limits](docs/VERIFICATION.md) explain what the checks establish. The published video below separately shows a saved agent response and a labeled replay of simulated collaboration.
 
 This is the separate recruiter entry for the [AI Worth Using OpenClaw 2.0 hackathon](https://luma.com/zhkhsnpa). The public Agent Index listing is verified and the demo is attached. Genuine hiring use, real collaborator validation, and entrant eligibility remain separate outstanding gates. The repository includes an isolated native OpenClaw installer and scoped Agent Index tooling.
 
@@ -52,7 +52,7 @@ Historical experiments reported the refined guarded arm passing seven fixture ga
 
 ## Demo video
 
-The [94-second Roletrace demo](https://www.youtube.com/watch?v=-CKQ7tGdFxE) is published unlisted, with captions and the Roletrace OpenAI-generated cover. It clearly labels fictional inputs and simulated collaboration. [Source, provenance, and publication status](docs/DEMO.md). YouTube signed-out playback and Agent Index attachment are verified. Narration uses ElevenLabs Brian - Relatable Everyman.
+The [94-second Roletrace demo](https://www.youtube.com/watch?v=ZztJ2jnq6JU) is public, with burned-in captions and ElevenLabs Brian narration. It shows the evidence trace, fresh offline validation, and a labeled replay of saved simulated-collaboration excerpts; inputs are fictional. [Source, provenance, and publication status](docs/DEMO.md). Signed-out playback and Agent Index attachment are verified.
 
 ## Hackathon finish line
 
